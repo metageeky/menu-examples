@@ -2,22 +2,40 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
+	<title>The HTML5 Herald</title>
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/yaml.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/yaml.js"></script>
 </head>
 
 <body>
+	<header>
+		<banner>
+			<a class="skipnavlink offscreen" href="#main" tabindex="0">
+				Skip to main content
+			</a>
+
+			<nav></nav>
+		</banner>
+	</header>
+	<main id="main">
+	
+	</main>
+	<footer>
+	
+	
+	</footer>
+	
 
 
-  <script>
-    var site = YAML.load('sitemap.yml');
-    console.log(site);
-  
-  </script>
+
+	<script>
+		var site = YAML.load('sitemap.yaml');
+		console.log(site);
+	
+	</script>
 </body>
 </html>

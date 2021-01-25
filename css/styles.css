@@ -1,4 +1,33 @@
 *:focus {
-   outline: dotted #0C0 3px;
-   outline-offset: 2px;
+	outline: dotted #060 3px;
+	outline-offset: 2px;
+}
+
+.offscreen {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.skipnavlink {
+	position: absolute;
+	margin: 5px;
+	font-size: 0.90em;
+	line-height: 1.75em;
+	padding: 10px;
+	color: #ffffff !important;
+	background-color: #060;
+	z-index: 2000;
+}
+
+.skipnavlink:focus {
+	overflow: auto;
+	clip: auto;
+	width: auto;
+	height: auto;
 }

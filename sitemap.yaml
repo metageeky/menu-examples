@@ -1,9 +1,10 @@
-- Home: !!omap
+--- # Site infrastructure
+- Home:
   - landing:
     - Search
     - Social Media
 
-- Cats: !!omap
+- Cats: 
   - landing:
     - History of Cats
     - Breeds vs. Coats
@@ -28,7 +29,7 @@
     - Fluff   
     - World Records
 
-- Chilis: !!omap
+- Chilis:
   - landing:
     - Handling
     - Understanding the Scoville Scale
@@ -45,7 +46,7 @@
     - Colors
     - Heat
 
-- UI Components: !!omap
+- UI Components: 
   - landing:
     - The role of ARIA
     - Testing 
