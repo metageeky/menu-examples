@@ -1,0 +1,71 @@
+- Home: !!omap
+  - landing:
+    - Search
+    - Social Media
+
+- Cats: !!omap
+  - landing:
+    - History of Cats
+    - Breeds vs. Coats
+    - Cuteness   
+  - Calico: 
+    - Fur
+    - Fluff
+    - Tails
+  - Tuxedo:
+    - Fur
+    - Fluff
+    - Formality
+  - Tabby:
+    - Fur
+    - Fluff
+  - Ragdoll:
+    - Fur
+    - Fluff
+    - Famous
+  - Maine Coon:
+    - Fur
+    - Fluff   
+    - World Records
+
+- Chilis: !!omap
+  - landing:
+    - Handling
+    - Understanding the Scoville Scale
+  - Habanero:
+    - Colors
+    - Heat LEvel
+  - Jalapeno:
+    - Heat Level
+    - Smoked   
+  - Poblano:
+    - Heat Level
+    - Smoked
+  - Bell:
+    - Colors
+    - Heat
+
+- UI Components: !!omap
+  - landing:
+    - The role of ARIA
+    - Testing 
+  - Accordion:
+    - Expected Functionality
+    - Demo Code
+    - Known Issues
+  - Dropdown:
+    - Expected Functionality
+    - Demo Code
+    - Known Issues
+  - Carousel:
+    - Expected Functionality
+    - Demo Code
+    - Known Issues  
+  - Modal:
+    - Expected Functionality
+    - Demo Code
+    - Known Issues  
+  - Date Picker:
+    - Expected Functionality
+    - Demo Code
+    - Known Issues  
