@@ -132,14 +132,15 @@
 				let ul = document.createElement('ul');
 				li.append(ul);
 				for(s in Object.keys(site[p].subpages)) {
+					let sp = site[p].subpages[s];
 					let sli = document.createElement('li');
 					ul.appendChild(sli)
 					let a = document.createElement('a');
 					a.href = document.location.pathname + '?seed=' + random.randomIntRange(1,50);
 					a.href += '&page=' + encodeURIComponent(p);
-					a.href += '&subpage=' + encodeURIComponent(s);
-					a.innerText = s;
-					a.id = p.replace(' ','-') + '_' + s.replace(' ','-');
+					a.href += '&subpage=' + encodeURIComponent(sp);
+					a.innerText = sp
+					a.id = p.replace(' ','-') + '_' + sp.replace(' ','-');
 					sli.appendChild(a);
 				}
 			}
