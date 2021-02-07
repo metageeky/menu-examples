@@ -132,7 +132,7 @@
 				let ul = document.createElement('ul');
 				li.append(ul);
 				for(s in Object.keys(site[p].subpages)) {
-					let sp = site[p].subpages[s];
+					let sp = site[p].subpages[parseInt(s)];
 					let sli = document.createElement('li');
 					ul.appendChild(sli)
 					let a = document.createElement('a');
