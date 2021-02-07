@@ -12,29 +12,29 @@ Cats:
     - Cuteness   
   subpages:
     - Calico: 
-      headings:
-        - Fur
-        - Fluff
-        - Tails
+        headings:
+          - Fur
+          - Fluff
+          - Tails
     - Tuxedo:
         headings:
-        - Fur
-        - Fluff
-        - Formality
+          - Fur
+          - Fluff
+          - Formality
     - Tabby:
         headings:
-        - Fur
-        - Fluff
+          - Fur
+          - Fluff
     - Ragdoll:
         headings:
-        - Fur
-        - Fluff
-        - Famous
+          - Fur
+          - Fluff
+          - Famous
     - Maine Coon:
         headings:
-        - Fur
-        - Fluff   
-        - World Records
+          - Fur
+          - Fluff   
+          - World Records
 
 Chilis:
   headings:
