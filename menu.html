@@ -173,7 +173,7 @@
 		var p_index = 0;
 		var n = random.randomIntRange(1,4);			
 		for(let i=0; i<n; i++) {
-			let e = document.getElementById('p' + r_array[(p_index + i)%30]).cloneNode();
+			let e = document.getElementById('p' + r_array[(p_index + i)%30]).cloneNode(true);
 			e.removeAttribute('id');
 			main.appendChild(e);
 		}
@@ -187,7 +187,7 @@
 			
 			n = random.randomIntRange(2,5);			
 			for(let j=0; j<n; j++) {
-				let e = document.getElementById('p' + r_array[(p_index + j)%30]).cloneNode();
+				let e = document.getElementById('p' + r_array[(p_index + j)%30]).cloneNode(true);
 				e.removeAttribute('id');
 				main.appendChild(e);
 			}
