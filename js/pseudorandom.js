@@ -28,7 +28,7 @@ class PseudoRandom {
 	}
 }
 
-function hashCode(str) {
+function seedFromString(str) {
   var hash = 0, i, chr;
   for (i = 0; i < str.length; i++) {
     chr   = str.charCodeAt(i);

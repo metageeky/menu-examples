@@ -122,7 +122,7 @@
 			nav.appendChild(li)
 			let a = document.createElement('a');
 			a.href = document.location.pathname + '?'
-			a.href += 'seed=' + hashCode(p);
+			a.href += 'seed=' + seedFromString(p);
 			a.href += '&page=' + encodeURIComponent(p);
 			a.innerText = p;
 			a.id = p.replace(' ','-');
@@ -137,7 +137,7 @@
 					ul.appendChild(sli)
 					let a = document.createElement('a');
 					a.href = document.location.pathname + '?'
-					a.href += 'seed=' + hashCode(p & s);
+					a.href += 'seed=' + seedFromString(p + s);
 					a.href += '&page=' + encodeURIComponent(p);
 					a.href += '&subpage=' + encodeURIComponent(s);
 					a.innerText = s;
