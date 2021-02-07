@@ -157,7 +157,37 @@
 		document.title += ' | SU Libraries';
 		
 		// H1
+		if(subpage === null)
+			document.getElementById('page-title').innerText = page;
+		else
+			document.getElementById('page-title').innerText = subpage;
 		
+		// H2 and paragraphs
+		document.getElementById('main');
+		var headings = [];
+		if(subpage === null)
+			headings = site[page].headings;
+		else
+			headings = site[page].subpages[subpage].headings;
+		var r_array = random.randomArray(40);
+		var p_index = 0;
+		var n = random.randomIntRange(1,4);			
+		for(let i=0; i<n; i++)
+			main.appendChild(document.getElementById('p' + r_array[(p_index + i) % 30]));
+		p_index = p_index + n;
+		
+		for(let i=0; i<headings.length; i++) {
+			let h2 = document.createElement('h2');
+			h2.innerText = headings[i];
+			h2.id = 'h2_' + headings[i].replace(' ', '-'); 
+			main.appendChild(h2);
+			
+			n = random.randomIntRange(2,5);			
+			for(let j=0; j<n; j++)
+				main.appendChild(document.getElementById('p' + r_array[ (p_index + j) % 30]));
+			p_index = p_index + n
+		}
+
 		
 		
 
