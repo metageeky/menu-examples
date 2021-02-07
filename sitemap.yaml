@@ -1,72 +1,106 @@
 --- # Site infrastructure
 - Home:
-  - landing:
+  - headings:
     - Search
     - Social Media
+  - subpages: 
+    - Cats
+    - Chilis
+    - UI Components
 
-- Cats: 
-  - landing:
+- Cats:
+  - headings:
     - History of Cats
     - Breeds vs. Coats
     - Cuteness   
-  - Calico: 
+  -subpages:
+    - Calico
+    - Tuxedo
+    - Tabby
+    - Ragdoll
+    - Maine Coon
+- Calico: 
+  - headings:
     - Fur
     - Fluff
     - Tails
-  - Tuxedo:
+- Tuxedo:
+  - headings:
     - Fur
     - Fluff
     - Formality
-  - Tabby:
+- Tabby:
+  - headings:
     - Fur
     - Fluff
-  - Ragdoll:
+- Ragdoll:
+  - headings:
     - Fur
     - Fluff
     - Famous
-  - Maine Coon:
+- Maine Coon:
+  - headings:
     - Fur
     - Fluff   
     - World Records
 
 - Chilis:
-  - landing:
+  - headings:
     - Handling
     - Understanding the Scoville Scale
-  - Habanero:
+  - subpages:
+    - Habanero
+    - Jalapeno
+    - Poblano
+    - Bell
+- Habanero:
+  - headings:
     - Colors
     - Heat LEvel
-  - Jalapeno:
+- Jalapeno:
+  - headings:
     - Heat Level
     - Smoked   
-  - Poblano:
+- Poblano:
+  - headings:
     - Heat Level
     - Smoked
-  - Bell:
+- Bell:
+  - headings:
     - Colors
     - Heat
-
+    
 - UI Components: 
-  - landing:
+  - headings:
     - The role of ARIA
     - Testing 
-  - Accordion:
+  - subpages:
+    - Dropdown
+    - Carousel
+    - Modal
+    - Date Picker
+- Accordion:
+  - headings:
     - Expected Functionality
     - Demo Code
     - Known Issues
-  - Dropdown:
+- Dropdown:
+  - headings:
     - Expected Functionality
     - Demo Code
     - Known Issues
-  - Carousel:
+- Carousel:
+  - headings:
     - Expected Functionality
     - Demo Code
     - Known Issues  
-  - Modal:
+- Modal:
+  - headings:
     - Expected Functionality
     - Demo Code
     - Known Issues  
-  - Date Picker:
+- Date Picker:
+  - headings:
     - Expected Functionality
     - Demo Code
     - Known Issues  
