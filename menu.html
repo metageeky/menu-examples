@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>The HTML5 Herald</title>
+	<title></title>
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -27,11 +27,11 @@
 		</banner>
 	</header>
 	<main id="main">
-		<h1 id="page-title">Title</h1>
+		<h1 id="page-title"></h1>
 	
 	</main>
 	<footer>
-	
+		Footer stuff goes here!
 	
 	</footer>
 	
@@ -102,7 +102,21 @@
 
 	<script>
 		var site = YAML.load('sitemap.yaml');
-		console.log(site);
+		var urlParams = new URLSearchParams(window.location.search);
+		var seed = 1;
+		if(urlParams.has('seed'))
+			seed = urlParams.get('seed');
+		var random = new PseudoRandom(seed);
+		var page = "Home";
+		if(urlParams.has('page'))
+			page = urlParams.get('page');
+		var subpage = null;
+		if(urlParams.has('subpage'))
+			subpage = urlParams.get('subpage');
+		
+		
+		
+		
 
 	</script>
 </body>
