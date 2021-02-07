@@ -169,11 +169,11 @@
 			headings = site[page].headings;
 		else
 			headings = site[page].subpages[subpage].headings;
-		var r_array = random.randomArray(40);
+		var r_array = random.randomArray(30);
 		var p_index = 0;
 		var n = random.randomIntRange(1,4);			
 		for(let i=0; i<n; i++)
-			main.appendChild(document.getElementById('p' + r_array[(p_index + i) % 30]));
+			main.appendChild(document.getElementById('p' + r_array[p_index + i]).cloneNode());
 		p_index = p_index + n;
 		
 		for(let i=0; i<headings.length; i++) {
@@ -184,7 +184,7 @@
 			
 			n = random.randomIntRange(2,5);			
 			for(let j=0; j<n; j++)
-				main.appendChild(document.getElementById('p' + r_array[ (p_index + j) % 30]));
+				main.appendChild(document.getElementById('p' + r_array[p_index + j]).cloneNode());
 			p_index = p_index + n
 		}
 
