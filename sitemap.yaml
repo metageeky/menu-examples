@@ -1,6 +1,6 @@
 --- # Site infrastructure
-- Home:
-  - headings:
+Home:
+  headings:
     - About
     - Search
     - Social Media
@@ -58,33 +58,33 @@
         - Colors
         - Heat
     
-- UI Components: 
-  - headings:
+UI Components: 
+  headings:
     - The role of ARIA
     - Testing 
-  - subpages:
-    - Accordion:
-      - headings:
+  subpages:
+    Accordion:
+      headings:
         - Expected Functionality
         - Demo Code
         - Known Issues
-    - Dropdown:
-      - headings:
+    Dropdown:
+      headings:
         - Expected Functionality
         - Demo Code
         - Known Issues
-    - Carousel:
-      - headings:
+    Carousel:
+      headings:
         - Expected Functionality
         - Demo Code
         - Known Issues  
-    - Modal:
-      - headings:
+    Modal:
+      headings:
         - Expected Functionality
         - Demo Code
         - Known Issues  
-    - Date Picker:
-      - headings:
+    Date Picker:
+      headings:
         - Expected Functionality
         - Demo Code
         - Known Issues  

@@ -102,6 +102,15 @@
 
 	<script>
 		var site = YAML.load('sitemap.yaml');
+		var pages =[];
+		for(let i=0; i<site.length; i++) {
+			let title = Object.keys(site[i])[0];
+			pages[title] {title:title, headings:[]};
+			
+		}
+
+		
+		
 		var urlParams = new URLSearchParams(window.location.search);
 		var seed = 1;
 		if(urlParams.has('seed'))
@@ -113,7 +122,9 @@
 		var subpage = null;
 		if(urlParams.has('subpage'))
 			subpage = urlParams.get('subpage');
-		
+W
+		// title update
+		document.title = page + ' - ' + subpage + ' | SU Libraries';
 		
 		
 		
