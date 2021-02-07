@@ -121,7 +121,8 @@
 			let li = document.createElement('li');
 			nav.appendChild(li)
 			let a = document.createElement('a');
-			a.href = document.location.pathname + '?seed=' + random.randomIntRange(1,50);
+			a.href = document.location.pathname + '?'
+			a.href += 'seed=' + hashCode(p);
 			a.href += '&page=' + encodeURIComponent(p);
 			a.innerText = p;
 			a.id = p.replace(' ','-');
@@ -135,7 +136,8 @@
 					let sli = document.createElement('li');
 					ul.appendChild(sli)
 					let a = document.createElement('a');
-					a.href = document.location.pathname + '?seed=' + random.randomIntRange(1,50);
+					a.href = document.location.pathname + '?'
+					a.href += 'seed=' + hashCode(p & s);
 					a.href += '&page=' + encodeURIComponent(p);
 					a.href += '&subpage=' + encodeURIComponent(s);
 					a.innerText = s;
