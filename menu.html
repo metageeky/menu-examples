@@ -131,16 +131,15 @@
 			if('subpages' in site[p]) {
 				let ul = document.createElement('ul');
 				li.append(ul);
-				for(s in Object.keys(site[p].subpages)) {
-					let sp = site[p].subpages[parseInt(s)];
+				for(s of Object.keys(site[p].subpages)) {
 					let sli = document.createElement('li');
 					ul.appendChild(sli)
 					let a = document.createElement('a');
 					a.href = document.location.pathname + '?seed=' + random.randomIntRange(1,50);
 					a.href += '&page=' + encodeURIComponent(p);
-					a.href += '&subpage=' + encodeURIComponent(sp);
+					a.href += '&subpage=' + encodeURIComponent(s);
 					a.innerText = sp
-					a.id = p.replace(' ','-') + '_' + sp.replace(' ','-');
+					a.id = p.replace(' ','-') + '_' + s.replace(' ','-');
 					sli.appendChild(a);
 				}
 			}
