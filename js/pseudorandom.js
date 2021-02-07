@@ -35,6 +35,6 @@ function hashCode(str) {
     hash  = ((hash << 5) - hash) + chr;
     hash |= 0; // Convert to 32bit integer
   }
-  hash = 1 + (Math.abs(hash) % 232357)
+  hash = 1 + (Math.abs(hash) % 6857);
   return hash;
 }
