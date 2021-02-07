@@ -141,7 +141,10 @@
 
 
 		// title update
-		document.title = page + ' - ' + subpage + ' | SU Libraries';
+		document.title = page;
+		if(subpage != null) 
+			document.title += ' - ' + subpage;
+		document.title += ' | SU Libraries';
 		
 		// H1
 		

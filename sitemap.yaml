@@ -11,49 +11,49 @@ Cats:
     - Breeds vs. Coats
     - Cuteness   
   subpages:
-    - Calico: 
-        headings:
-          - Fur
-          - Fluff
-          - Tails
-    - Tuxedo:
-        headings:
-          - Fur
-          - Fluff
-          - Formality
-    - Tabby:
-        headings:
-          - Fur
-          - Fluff
-    - Ragdoll:
-        headings:
-          - Fur
-          - Fluff
-          - Famous
-    - Maine Coon:
-        headings:
-          - Fur
-          - Fluff   
-          - World Records
+    Calico: 
+      headings:
+        - Fur
+        - Fluff
+        - Tails
+    Tuxedo:
+      headings:
+        - Fur
+        - Fluff
+        - Formality
+    Tabby:
+      headings:
+        - Fur
+        - Fluff
+    Ragdoll:
+      headings:
+        - Fur
+        - Fluff
+        - Famous
+    Maine Coon:
+      headings:
+        - Fur
+        - Fluff   
+        - World Records
 
 Chilis:
   headings:
     - Handling
     - Understanding the Scoville Scale
   subpages:
-    - Habanero:
+    Habanero:
         headings:
           - Colors
           - Heat LEvel
-    - Jalapeno:
+    Jalapeno:
         headings:
          - Heat Level
           - Smoked   
-    - Poblano:
+    Poblano:
         headings:
           - Heat Level
           - Smoked
-    - Bell:
+    Bell:
         headings:
           - Colors
           - Heat
