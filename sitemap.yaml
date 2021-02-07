@@ -1,106 +1,90 @@
 --- # Site infrastructure
 - Home:
   - headings:
+    - About
     - Search
     - Social Media
-  - subpages: 
-    - Cats
-    - Chilis
-    - UI Components
-
+    
 - Cats:
   - headings:
     - History of Cats
     - Breeds vs. Coats
     - Cuteness   
   -subpages:
-    - Calico
-    - Tuxedo
-    - Tabby
-    - Ragdoll
-    - Maine Coon
-- Calico: 
-  - headings:
-    - Fur
-    - Fluff
-    - Tails
-- Tuxedo:
-  - headings:
-    - Fur
-    - Fluff
-    - Formality
-- Tabby:
-  - headings:
-    - Fur
-    - Fluff
-- Ragdoll:
-  - headings:
-    - Fur
-    - Fluff
-    - Famous
-- Maine Coon:
-  - headings:
-    - Fur
-    - Fluff   
-    - World Records
+    - Calico: 
+      - headings:
+        - Fur
+        - Fluff
+        - Tails
+    - Tuxedo:
+      - headings:
+        - Fur
+        - Fluff
+        - Formality
+    - Tabby:
+      - headings:
+        - Fur
+        - Fluff
+    - Ragdoll:
+      - headings:
+        - Fur
+        - Fluff
+        - Famous
+    - Maine Coon:
+      - headings:
+        - Fur
+        - Fluff   
+        - World Records
 
 - Chilis:
   - headings:
     - Handling
     - Understanding the Scoville Scale
   - subpages:
-    - Habanero
-    - Jalapeno
-    - Poblano
-    - Bell
-- Habanero:
-  - headings:
-    - Colors
-    - Heat LEvel
-- Jalapeno:
-  - headings:
-    - Heat Level
-    - Smoked   
-- Poblano:
-  - headings:
-    - Heat Level
-    - Smoked
-- Bell:
-  - headings:
-    - Colors
-    - Heat
+    - Habanero:
+      - headings:
+        - Colors
+        - Heat LEvel
+    - Jalapeno:
+      - headings:
+        - Heat Level
+        - Smoked   
+    - Poblano:
+      - headings:
+        - Heat Level
+        - Smoked
+    - Bell:
+      - headings:
+        - Colors
+        - Heat
     
 - UI Components: 
   - headings:
     - The role of ARIA
     - Testing 
   - subpages:
-    - Dropdown
-    - Carousel
-    - Modal
-    - Date Picker
-- Accordion:
-  - headings:
-    - Expected Functionality
-    - Demo Code
-    - Known Issues
-- Dropdown:
-  - headings:
-    - Expected Functionality
-    - Demo Code
-    - Known Issues
-- Carousel:
-  - headings:
-    - Expected Functionality
-    - Demo Code
-    - Known Issues  
-- Modal:
-  - headings:
-    - Expected Functionality
-    - Demo Code
-    - Known Issues  
-- Date Picker:
-  - headings:
-    - Expected Functionality
-    - Demo Code
-    - Known Issues  
+    - Accordion:
+      - headings:
+        - Expected Functionality
+        - Demo Code
+        - Known Issues
+    - Dropdown:
+      - headings:
+        - Expected Functionality
+        - Demo Code
+        - Known Issues
+    - Carousel:
+      - headings:
+        - Expected Functionality
+        - Demo Code
+        - Known Issues  
+    - Modal:
+      - headings:
+        - Expected Functionality
+        - Demo Code
+        - Known Issues  
+    - Date Picker:
+      - headings:
+        - Expected Functionality
+        - Demo Code
+        - Known Issues  
