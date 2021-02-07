@@ -101,6 +101,10 @@
 
 
 	<script>
+		window.onload = function() {
+			console.log('loaded');
+		}
+	
 		// load everything but interpret later
 		var site = YAML.load('sitemap.yaml');
 		var urlParams = new URLSearchParams(window.location.search);
