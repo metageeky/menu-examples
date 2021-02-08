@@ -35,3 +35,58 @@
 #dummy-text {
 	display: none;
 }
+
+#logo {
+    max-width: 300px;
+    margin: 20px 20px 0;
+}
+
+#main-navigation {
+	color: #eee;
+	background: #555;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#main-navigation > ul {
+	padding: 0 10px;
+	margin: 0;
+	
+}
+
+#main-navigation > ul > li {
+	padding: 0;
+}
+
+#main-navigation > ul > li > a {
+	padding: 10px 14px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;	
+}
+#main-navigation > ul > li > a:hover {
+	background: #008;
+}
+#main-navigation > ul > li > a:focus {
+  outline: dotted #fff 3px;
+	outline-offset: -4px;}
+}
+
+
+#main-navigation > ul > li > ul {
+	display: none;
+}
+
+main {
+	margin: 20px;
+}
+
+main + footer {
+	background: #555;
+	color: #fff;
+	font-size: 1.25rem;
+	padding: 1em 0;
+	text-align: center;
+	text-transform: lowercase;
+}
