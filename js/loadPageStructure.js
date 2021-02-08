@@ -51,7 +51,7 @@ function LoadPageStructure() {
 		crumbs.style.display = "none";
 	}
 	else {
-		let ol = crumbs.querySelector(ol);
+		let ol = crumbs.querySelector('ol');
 		// Add home
 		let li = document.createElement('li');;
 		ol.appendChild(li);
