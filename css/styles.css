@@ -84,12 +84,22 @@ p + p {
 	text-decoration: underline;
 }
 #sub-navigation a[aria-current] {
-	font-weight: 600;
-	color: #F00;
+	text-decoration: italic;
+}
+#sub-navigation a[aria-current]:after {
+	content: "";
+	display: inline-block;
+	width: 0.75rem;
+	height: 0.75rem;
+	background-image: url('assets/left-arrow.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: 2px;
 }
 
 #sub-navigation {
-	padding: 0.25rem 0.875rem;
+	padding: 0.25rem 0.75rem;
 	border: solid 2px #000;
 }
 #sub-navigation h2 {
@@ -98,7 +108,7 @@ p + p {
 	margin: 0;
 }
 #sub-navigation hr {
-	margin: 0.25rem -0.875rem;
+	margin: 0.25rem -0.75rem;
 }
 #sub-navigation ol {
 	font-size: 1.125rem;
