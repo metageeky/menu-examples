@@ -85,6 +85,10 @@ p + p {
 }
 #sub-navigation a[aria-current] {
 	font-style: italic;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin-left: -0.625rem;
 }
 #sub-navigation a[aria-current]:before {
 	content: "";
