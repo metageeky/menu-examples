@@ -37,10 +37,17 @@
 }
 
 .page-centered-content {
-	max-width: 900px;
-	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+@media screen and (min-width: 900px) {
+	.page-centered-text {
+		max-width: 900px;
+		margin: 0 auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 #logo {
