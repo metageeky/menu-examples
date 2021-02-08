@@ -45,9 +45,49 @@ function LoadPageStructure() {
 		}
 	}
 	
-
-
-
+	// breadcrumbs 
+	var crumbs = document.getElementById('breadcrumbs');
+	if(page == "Home") {
+		crumbs.style.display = "none";
+	}
+	else {
+		let ol = crumbs.querySelector(ol);
+		// Add home
+		let li = document.createElement('li');;
+		ol.appendChild(li);
+		let a = document.createElement('a');
+		a.href = document.location.pathname + '?'
+		a.href += 'seed=' + seedFromString('Home');
+		a.href += '&page=' + encodeURIComponent('Home');
+		a.innerText = 'Home';
+		
+		// Add page
+		li = document.createElement('li');;
+		ol.appendChild(li);
+		a = document.createElement('a');
+		a.href = document.location.pathname + '?'
+		a.href += 'seed=' + seedFromString(page);
+		a.href += '&page=' + encodeURIComponent(page);
+		a.innerText = page;
+		
+		// add subpage
+		if(subpage === null) {
+			a.setAttribute('aria-current','page');
+		}
+		else {
+			li = document.createElement('li');;
+			ol.appendChild(li);
+			a = document.createElement('a');
+			a.href = document.location.pathname + '?'
+			a.href += 'seed=' + seedFromString(page + subpage);
+			a.href += '&page=' + encodeURIComponent(page);
+			a.href += '&subpage=' + encodeURIComponent(subpage);
+			a.innerText = subpage;
+			a.setAttribute('aria-current','page');
+		}
+	}
+		
+	
 	// title update
 	document.title = page;
 	if(subpage != null) 
@@ -61,7 +101,7 @@ function LoadPageStructure() {
 		document.getElementById('page-title').innerText = subpage;
 	
 	// H2 and paragraphs
-	document.getElementById('main');
+	var main = document.getElementById('main-content');
 	var headings = [];
 	if(subpage === null)
 		headings = site[page].headings;
