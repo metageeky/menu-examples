@@ -90,9 +90,12 @@ function LoadPageStructure() {
 		a.href = document.location.pathname + '?'
 		a.href += 'seed=' + seedFromString(p);
 		a.href += '&page=' + encodeURIComponent(p);
-		a.innerText = p;
+		a.innerHTML = p + ' <span class="offscreen">Navigation</span>';
 		a.id = 'subMenu_' + p.replaceAll(' ','-');
 		h2.appendChild(a);
+		
+		if(subpage === null)
+			a.setAttribute('aria-current','page');
 		
 		let ol = document.querySelector('#sub-navigation ol');
 		for(s of Object.keys(site[p].subpages)) {
@@ -105,6 +108,8 @@ function LoadPageStructure() {
 			a.href += '&subpage=' + encodeURIComponent(s);
 			a.innerText = s;
 			a.id = 'subMenu_' + p.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
+			if(s == subpage)
+				a.setAttribute('aria-current','page');
 			sli.appendChild(a);
 		}
 	}

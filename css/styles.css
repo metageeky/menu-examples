@@ -66,12 +66,13 @@ p + p {
 }
 
 #sub-navigation {
-	padding: 0.5rem;
+	padding: 0.875rem;
 	border: solid 2px #000;
 }
 #sub-navigation h2 {
 	white-space: nowrap;
 	font-size: 1.25rem;
+	margin: 0;
 }
 #sub-navigation ol {
 	font-size: 1.125rem;
