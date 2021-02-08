@@ -53,7 +53,7 @@ function LoadPageStructure() {
 	else {
 		let ol = crumbs.querySelector('ol');
 		// Add home
-		let li = document.createElement('li');;
+		let li = document.createElement('li');
 		ol.appendChild(li);
 		let a = document.createElement('a');
 		a.href = document.location.pathname + '?'
@@ -63,18 +63,19 @@ function LoadPageStructure() {
 		li.appendChild(a);
 		
 		// Add page
-		li = document.createElement('li');;
+		li = document.createElement('li');
 		ol.appendChild(li);
-		if(subpage != null) {
+		if(subpage === null) {
+			li.innerHTML = '<span>' + page + '</span>';
+		}
+		else {
+			li = document.createElement('li');
 			a = document.createElement('a');
 			a.href = document.location.pathname + '?'
 			a.href += 'seed=' + seedFromString(page);
 			a.href += '&page=' + encodeURIComponent(page);
 			a.innerText = page;
 			li.appendChild(a);
-		}
-		else {
-			li.innerHTML = '<span>' + page + '</span>';
 			li = document.createElement('li');;
 			ol.appendChild(li);
 			li.innerHTML = '<span>' + subpage + '</span>';
