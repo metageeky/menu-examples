@@ -60,6 +60,7 @@ function LoadPageStructure() {
 		a.href += 'seed=' + seedFromString('Home');
 		a.href += '&page=' + encodeURIComponent('Home');
 		a.innerText = 'Home';
+		li.appendChild(a);
 		
 		// Add page
 		li = document.createElement('li');;
@@ -69,6 +70,7 @@ function LoadPageStructure() {
 		a.href += 'seed=' + seedFromString(page);
 		a.href += '&page=' + encodeURIComponent(page);
 		a.innerText = page;
+		li.appendChild(a);
 		
 		// add subpage
 		if(subpage === null) {
@@ -84,6 +86,7 @@ function LoadPageStructure() {
 			a.href += '&subpage=' + encodeURIComponent(subpage);
 			a.innerText = subpage;
 			a.setAttribute('aria-current','page');
+			li.appendChild(a);
 		}
 	}
 		
