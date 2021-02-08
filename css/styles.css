@@ -57,6 +57,32 @@ p + p {
 	display: none;
 }
 
+#main {
+	display: flex;
+}
+
+#sidebar { 
+	padding-left: 1rem;
+}
+
+#sub-navigation {
+	padding: 0.5rem;
+	border: solid 2px #000;
+}
+#sub-navigation h2 {
+	white-space: nowrap;
+	font-size: 1.25rem;
+}
+#sub-navigation ol {
+	font-size: 1.125rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#sub-navigation ol li {
+	margin: 0.25rem 0 0;
+}
+
 #breadcrumbs ol {
 		margin: 0;
 		padding: 15px 0 0;
