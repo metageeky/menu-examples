@@ -84,7 +84,7 @@ function LoadPageStructure() {
 	// sub nav
 	
 	if('subpages' in site[page]) {
-		let nav = document.querySelector('#sub-navigation');
+		let nav = document.getElementById('sub-navigation');
 		let h2 = document.createElement('h2');
 		h2.innerText = page;
 		nav.appendChild(h2);
