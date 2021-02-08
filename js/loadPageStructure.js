@@ -84,13 +84,17 @@ function LoadPageStructure() {
 	// sub nav
 	
 	if('subpages' in site[page]) {
-		let nav = document.getElementById('sub-navigation');
-		let h2 = document.createElement('h2');
 		let p = page;
-		h2.innerText = page;
-		nav.appendChild(h2);
-		let ol = document.createElement('ol');
-		nav.appendChild(ol);
+		let h2 = document.querySelector('#sub-navigation h2');
+		let a = document.createElement('a');
+		a.href = document.location.pathname + '?'
+		a.href += 'seed=' + seedFromString(p);
+		a.href += '&page=' + encodeURIComponent(p);
+		a.innerText = p;
+		a.id = 'subMenu_' + p.replaceAll(' ','-');
+		h2.appendChild(a);
+		
+		let ol = document.querySelector('#sub-navigation ol');
 		for(s of Object.keys(site[p].subpages)) {
 			let sli = document.createElement('li');
 			ol.appendChild(sli)
