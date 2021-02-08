@@ -97,10 +97,18 @@ function LoadPageStructure() {
 		if(subpage === null)
 			a.setAttribute('aria-current','page');
 		
+		let arrow1 = new Node('svg');
+		arrow1.innerHTML = '<use xlink:href="#icon-right-triangle"></use>';
+		arrow1.classList.add('icon');
+		let arrow2 = new Node('svg');
+		arrow2.innerHTML = '<use xlink:href="#icon-left-triangle"></use>';
+		arrow2.classList.add('icon');
+		
 		let ol = document.querySelector('#sub-navigation ol');
 		for(s of Object.keys(site[p].subpages)) {
 			let sli = document.createElement('li');
-			ol.appendChild(sli)
+			ol.appendChild(sli);
+			sli.appendChild(arrow1.cloneNode(true));
 			let a = document.createElement('a');
 			a.href = document.location.pathname + '?'
 			a.href += 'seed=' + seedFromString(p + s);
@@ -111,6 +119,7 @@ function LoadPageStructure() {
 			if(s == subpage)
 				a.setAttribute('aria-current','page');
 			sli.appendChild(a);
+			sli.appendChild(arrow2.cloneNode(true));
 		}
 	}
 	else {
