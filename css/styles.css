@@ -48,7 +48,7 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-	navigation > ul > li:first-of-type {
+	#main-navigation > ul > li:first-of-type {
 		margin-left: -15px;
 	}
 }
