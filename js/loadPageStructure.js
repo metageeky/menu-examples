@@ -69,7 +69,6 @@ function LoadPageStructure() {
 			li.innerHTML = '<span>' + page + '</span>';
 		}
 		else {
-			li = document.createElement('li');
 			a = document.createElement('a');
 			a.href = document.location.pathname + '?'
 			a.href += 'seed=' + seedFromString(page);
