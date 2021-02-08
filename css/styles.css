@@ -39,12 +39,13 @@
 .page-centered-content {
 	padding-left: 15px;
 	padding-right: 15px;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 @media screen and (min-width: 900px) {
 	.page-centered-text {
-		max-width: 900px;
-		margin: 0 auto;
+		background-color: yellow;
 		padding-left: 0;
 		padding-right: 0;
 	}
