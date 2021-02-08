@@ -11,7 +11,21 @@ banner div.page-centered-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-flow: row nowrap;
+	margin: 15px auto;
 } 
+
+#logo-container {
+	flex: 1 1 auto;
+	min-width: 100px;
+	max-width: 300px;
+}
+
+#logo {
+	display: block;
+	max-width: 100%;
+	max-height: 100vh;
+}
 
 #menuType {
 	padding: 1rem;
@@ -181,10 +195,7 @@ p + p {
 	}
 }
 
-#logo {
-		max-width: 300px;
-		margin: 15px 0px;
-}
+
 
 #main-navigation {
 	color: #eee;

@@ -123,6 +123,7 @@ function LoadPageStructure() {
 		}
 	}
 	else {
+		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('sub-navigation').style.display = 'none';
 	}
 
