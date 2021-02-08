@@ -35,11 +35,11 @@ function LoadPageStructure() {
 				ol.appendChild(sli)
 				let a = document.createElement('a');
 				a.href = document.location.pathname + '?'
-				a.href += 'seed=' + seedFromString(p + s);
-				a.href += '&page=' + encodeURIComponent(p);
+				a.href += 'seed=' + seedFromString(page + s);
+				a.href += '&page=' + encodeURIComponent(page);
 				a.href += '&subpage=' + encodeURIComponent(s);
 				a.innerText = s;
-				a.id = 'mainMenu_' + p.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
+				a.id = 'mainMenu_' + page.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
 				sli.appendChild(a);
 			}
 		}
