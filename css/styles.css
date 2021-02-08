@@ -86,7 +86,7 @@ p + p {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	#main-navigation > ul > li:first-of-type {
+	#main-navigation > ol > li:first-of-type {
 		margin-left: -15px;
 	}
 }
@@ -103,32 +103,31 @@ p + p {
 	font-size: 1.5rem;
 }
 
-#main-navigation > ul {
+#main-navigation > ol {
 	padding: 0;
 }
 
-#main-navigation > ul > li {
+#main-navigation > ol > li {
 	padding: 0;
 	display: inline-block;
 }
 
-#main-navigation > ul > li > a {
+#main-navigation > ol > li > a {
 	padding: 10px 15px;
 	display: block;
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;	
 }
-#main-navigation > ul > li > a:hover {
+#main-navigation > ol > li > a:hover {
 	background: #14F;
 }
-#main-navigation > ul > li > a:focus {
+#main-navigation > ol > li > a:focus {
 	outline: dotted #fff 3px;
 	outline-offset: -4px;
 }
 
-
-#main-navigation > ul > li > ul {
+#main-navigation > ol > li > ol {
 	display: none;
 }
 

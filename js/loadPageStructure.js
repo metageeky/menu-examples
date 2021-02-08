@@ -82,10 +82,8 @@ function LoadPageStructure() {
 	}
 
 	// sub nav
-	if(subpage === null) {
-		document.getElementById('sub-navigation').style.display = 'none';
-	}
-	else {
+	
+	if('subpages' in site[page]) {
 		let ol = document.querySelector('#sub-navigation ol');
 		li.append(ol);
 		for(s of Object.keys(site[page].subpages)) {
@@ -100,6 +98,9 @@ function LoadPageStructure() {
 			a.id = 'subMenu_' + p.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
 			sli.appendChild(a);
 		}
+	}
+	else {
+		document.getElementById('sub-navigation').style.display = 'none';
 	}
 
 
