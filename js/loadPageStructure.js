@@ -117,7 +117,7 @@ function LoadPageStructure() {
 		h2.id = 'h2_' + headings[i].replaceAll(' ', '-'); 
 		main.appendChild(h2);
 		
-		n = random.randomIntRange(2,5);			
+		n = random.randomIntRange(2,6);			
 		for(let j=0; j<n; j++) {
 			let e = document.getElementById('p' + r_array[(p_index + j)%30]).cloneNode(true);
 			e.removeAttribute('id');
