@@ -65,7 +65,7 @@ function LoadPageStructure() {
 		// Add page
 		li = document.createElement('li');;
 		ol.appendChild(li);
-		if(subpage !== null) {
+		if(subpage != null) {
 			a = document.createElement('a');
 			a.href = document.location.pathname + '?'
 			a.href += 'seed=' + seedFromString(page);
@@ -77,13 +77,7 @@ function LoadPageStructure() {
 			li.innerHTML = '<span>' + page + '</span>';
 			li = document.createElement('li');;
 			ol.appendChild(li);
-			a = document.createElement('a');
-			a.href = document.location.pathname + '?'
-			a.href += 'seed=' + seedFromString(page + subpage);
-			a.href += '&page=' + encodeURIComponent(page);
-			a.href += '&subpage=' + encodeURIComponent(subpage);
-			a.innerText = subpage;
-			li.appendChild(a);
+			li.innerHTML = '<span>' + subpage + '</span>';
 		}
 	}
 		
