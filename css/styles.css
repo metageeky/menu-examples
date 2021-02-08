@@ -63,6 +63,15 @@ p + p {
 
 #sidebar { 
 	padding-left: 1rem;
+	min-width: 175px;
+	max-width: 200px;
+}
+
+#sub-navigation a {
+	text-decoration: none;
+}
+#sub-navigation a:hover {
+	text-decoration: underline;
 }
 
 #sub-navigation {
