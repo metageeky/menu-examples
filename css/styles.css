@@ -9,12 +9,20 @@ a, a:visited {
 
 h1 {
 	font-size: 2.25rem;
-	margin: 0.67em 0 0.25em;
+	margin: 1rem 0 0.25rem;
 }
 
 h2 {
 	font-size: 1.75rem;
-	margin: 0.5em 0 0.25em;
+	margin: 0.75rem 0 0.25rem;
+}
+
+p { 
+	margin: 0;
+}
+
+p + p {
+	margin-top: 0.75rem;
 }
 
 .offscreen {
