@@ -23,7 +23,7 @@ function LoadPageStructure() {
 		a.href += 'seed=' + seedFromString(p);
 		a.href += '&page=' + encodeURIComponent(p);
 		a.innerText = p;
-		a.id = p.replace(' ','-');
+		a.id = p.replaceAll(' ','-');
 		li.appendChild(a);
 		
 		// submenu
@@ -39,7 +39,7 @@ function LoadPageStructure() {
 				a.href += '&page=' + encodeURIComponent(p);
 				a.href += '&subpage=' + encodeURIComponent(s);
 				a.innerText = s;
-				a.id = p.replace(' ','-') + '_' + s.replace(' ','-');
+				a.id = p.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
 				sli.appendChild(a);
 			}
 		}
@@ -114,7 +114,7 @@ function LoadPageStructure() {
 	for(let i=0; i<headings.length; i++) {
 		let h2 = document.createElement('h2');
 		h2.innerText = headings[i];
-		h2.id = 'h2_' + headings[i].replace(' ', '-'); 
+		h2.id = 'h2_' + headings[i].replaceAll(' ', '-'); 
 		main.appendChild(h2);
 		
 		n = random.randomIntRange(2,5);			
