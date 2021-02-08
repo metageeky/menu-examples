@@ -44,10 +44,12 @@
 }
 
 @media screen and (min-width: 900px) {
-	.page-centered-text {
-		background-color: yellow;
+	.page-centered-content {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	navigation > ul > li:first-of-type {
+		margin-left: -15px;
 	}
 }
 
