@@ -97,10 +97,10 @@ function LoadPageStructure() {
 		if(subpage === null)
 			a.setAttribute('aria-current','page');
 		
-		let arrow1 = new Node('svg');
+		let arrow1 = document.createElement('svg');
 		arrow1.innerHTML = '<use xlink:href="#icon-right-triangle"></use>';
 		arrow1.classList.add('icon');
-		let arrow2 = new Node('svg');
+		let arrow2 = document.createElement('svg');
 		arrow2.innerHTML = '<use xlink:href="#icon-left-triangle"></use>';
 		arrow2.classList.add('icon');
 		
