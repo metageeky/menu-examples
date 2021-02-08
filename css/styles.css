@@ -7,6 +7,8 @@ a, a:visited {
 	color: #14F;
 }
 
+
+
 h1 {
 	font-size: 2.25rem;
 	margin: 1.125rem 0 0.5rem;
@@ -69,19 +71,27 @@ p + p {
 
 #sub-navigation a {
 	text-decoration: none;
+	font-weight: 400;
 }
 #sub-navigation a:hover {
 	text-decoration: underline;
 }
+#sub-navigation a[aria-current] {
+	font-weight: 600;
+	color: #F00;
+}
 
 #sub-navigation {
-	padding: 0.875rem;
+	padding: 0.25rem 0.875rem;
 	border: solid 2px #000;
 }
 #sub-navigation h2 {
 	white-space: nowrap;
 	font-size: 1.25rem;
 	margin: 0;
+}
+#sub-navigation hr {
+	margin: 0.25rem -0.875rem;
 }
 #sub-navigation ol {
 	font-size: 1.125rem;
