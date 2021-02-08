@@ -65,18 +65,16 @@ function LoadPageStructure() {
 		// Add page
 		li = document.createElement('li');;
 		ol.appendChild(li);
-		a = document.createElement('a');
-		a.href = document.location.pathname + '?'
-		a.href += 'seed=' + seedFromString(page);
-		a.href += '&page=' + encodeURIComponent(page);
-		a.innerText = page;
-		li.appendChild(a);
-		
-		// add subpage
-		if(subpage === null) {
-			a.setAttribute('aria-current','page');
+		if(subpage !== null) {
+			a = document.createElement('a');
+			a.href = document.location.pathname + '?'
+			a.href += 'seed=' + seedFromString(page);
+			a.href += '&page=' + encodeURIComponent(page);
+			a.innerText = page;
+			li.appendChild(a);
 		}
 		else {
+			li.innerHTML = '<span>' + page + '</span>';
 			li = document.createElement('li');;
 			ol.appendChild(li);
 			a = document.createElement('a');
@@ -85,7 +83,6 @@ function LoadPageStructure() {
 			a.href += '&page=' + encodeURIComponent(page);
 			a.href += '&subpage=' + encodeURIComponent(subpage);
 			a.innerText = subpage;
-			a.setAttribute('aria-current','page');
 			li.appendChild(a);
 		}
 	}

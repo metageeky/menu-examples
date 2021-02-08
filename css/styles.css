@@ -1,5 +1,5 @@
 *:focus {
-	outline: dotted #060 3px;
+	outline: dotted #14F 3px;
 	outline-offset: 2px;
 }
 
@@ -26,7 +26,7 @@ a, a:visited {
 	line-height: 1.75em;
 	padding: 10px;
 	color: #ffffff !important;
-	background-color: #060;
+	background-color: #14F;
 	z-index: 2000;
 }
 
@@ -104,7 +104,7 @@ a, a:visited {
 	text-transform: uppercase;	
 }
 #main-navigation > ul > li > a:hover {
-	background: #008;
+	background: #14F;
 }
 #main-navigation > ul > li > a:focus {
 	outline: dotted #fff 3px;
