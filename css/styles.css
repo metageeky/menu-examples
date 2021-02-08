@@ -36,9 +36,16 @@
 	display: none;
 }
 
+.page-centered-content {
+	max-width: 900px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 #logo {
     max-width: 300px;
-    margin: 15px 20px;
+    margin: 15px 0px;
 }
 
 #main-navigation {
@@ -49,9 +56,7 @@
 }
 
 #main-navigation > ul {
-	padding: 0 10px;
-	margin: 0;
-	
+	padding: 0;
 }
 
 #main-navigation > ul > li {
@@ -60,7 +65,7 @@
 }
 
 #main-navigation > ul > li > a {
-	padding: 10px 14px;
+	padding: 10px 15px;
 	display: block;
 	color: #fff;
 	text-decoration: none;
