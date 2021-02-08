@@ -84,14 +84,25 @@ p + p {
 	text-decoration: underline;
 }
 #sub-navigation a[aria-current] {
-	text-decoration: italic;
+	font-style: italic;
+}
+#sub-navigation a[aria-current]:before {
+	content: "";
+	display: inline-block;
+	width: 0.625rem;
+	height: 0.625rem;
+	background-image: url('../assets/right-arrow.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 2px;
 }
 #sub-navigation a[aria-current]:after {
 	content: "";
 	display: inline-block;
-	width: 0.75rem;
-	height: 0.75rem;
-	background-image: url('assets/left-arrow.svg');
+	width: 0.625rem;
+	height: 0.625rem;
+	background-image: url('../assets/left-arrow.svg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
