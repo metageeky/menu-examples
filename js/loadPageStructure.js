@@ -170,4 +170,6 @@ function LoadPageStructure() {
 		}
 		p_index = p_index + n
 	}
+	
+	console.log('end load structure');
 }
