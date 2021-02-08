@@ -85,7 +85,6 @@ function LoadPageStructure() {
 	
 	if('subpages' in site[page]) {
 		let ol = document.querySelector('#sub-navigation ol');
-		li.append(ol);
 		for(s of Object.keys(site[page].subpages)) {
 			let sli = document.createElement('li');
 			ol.appendChild(sli)
