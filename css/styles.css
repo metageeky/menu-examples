@@ -7,7 +7,19 @@ a, a:visited {
 	color: #14F;
 }
 
+banner div.page-centered-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
+#menuType {
+	padding: 1rem;
+	font-size: 1.5rem;
+	text-transform: lowercase;
+	color: #fff;
+	background: #66f;
+}
 
 h1 {
 	font-size: 2.25rem;
