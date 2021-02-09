@@ -238,7 +238,6 @@ main + footer {
     color: #fff;
     background-color: transparent;
     border: none;
-    background: transparent;
     padding: 0.625rem 0.25rem;
 }
 .dropdown-link-menu li button svg {
