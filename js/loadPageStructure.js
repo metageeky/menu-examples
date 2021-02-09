@@ -235,9 +235,14 @@ function addDropdownLinkMenu(node) {
 	document.addEventListener('keydown', function(event){
 		if(event.key === "Escape") {
 			let node = event.target;
+			if(node.classList.contains('dropdown-menu-toggle')) {
+				// close menu
+				node.setAttribute('aria-expanded', 'false');
+				return;
+			}
 			if(!node.hasAttribute('data-menu-item-control'))
 				return;
-			let b = document.getElementById(node.hasAttribute('data-menu-item-control'));
+			let b = document.getElementById(node.getAttribute('data-menu-item-control'));
 			b.setAttribute('aria-expanded', 'false');
 			b.focus();
 		}
