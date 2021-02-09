@@ -203,7 +203,7 @@ function addDropdownLinkMenu(node) {
 		let sub = topItem[i].querySelector('ol');
 		let b = document.createElement('button');
 		
-		b.innerHtml = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-down-triangle" /></svg>';
+		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-down-triangle" /></svg>';
 		topItem[i].insertBefore(b,sub);
 		
 	}

@@ -169,8 +169,6 @@ p + p {
 	}
 }
 
-
-
 #main-navigation {
 	color: #eee;
 	background: #555;
@@ -189,7 +187,7 @@ p + p {
 
 #main-navigation > ol > li > a {
 	padding: 10px 15px;
-	display: block;
+	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;	
