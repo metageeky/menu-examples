@@ -27,6 +27,8 @@
 
 body {
 	font-family: ShermanSans, Verdana, Tahoma, sans-serif;
+	color: #eee;
+	line-height: 1.6;
 }
 
 a, a:visited {
@@ -185,6 +187,8 @@ p + p {
 	margin: 0 auto;
 }
 
+
+
 @media screen and (min-width: 900px) {
 	.page-centered-content {
 		padding-left: 0;
@@ -199,7 +203,7 @@ p + p {
 	color: #eee;
 	background: #444;
 	padding: 0;
-	font-size: 1.5rem;
+	font-size: 1.3125rem;
 }
 
 .main-navigation > ol {
@@ -256,6 +260,16 @@ main + footer {
 .main-navigation.dropdown-link-menu > ol > li a {
 	padding: 0.625rem 0.25rem;
 }
+
+.main-navigation.dropdown-link-menu > ol > li:first-of-type {
+	margin-left: calc(15px - 0.25rem);
+}
+@media screen and (min-width: 900px) {
+	.main-navigation.dropdown-link-menu > ol > li:first-of-type {
+		margin-left: 0;
+	}
+}
+
 .main-navigation.dropdown-link-menu > ol > li + li {
 	margin-left: 1rem;
 }
@@ -269,6 +283,7 @@ main + footer {
 	background-color: transparent;
 	border: none;
 	padding: 0.625rem 0.5rem;
+	line-height: inherit;
 }
 .dropdown-link-menu li button svg.icon {
 	height: 0.625em;
