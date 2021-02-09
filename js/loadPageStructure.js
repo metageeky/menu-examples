@@ -232,7 +232,12 @@ function addDropdownLinkMenu(node) {
 				let prevNode = evt.target;
 				let prevTogId = prevNode.getAttribute('data-menu-item-control');
 				let currNode = evt.relatedTarget;
-				if(currNode.nodeName == "A") {
+				
+				if(currNode === null) {
+					// close button
+					document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+				}
+				else if(currNode.nodeName == "A") {
 					if(prevTogId != currNode.getAttribute('data-menu-item-control')) {
 						// close button
 						document.getElementById(prevTogId).setAttribute('aria-expanded','false');
