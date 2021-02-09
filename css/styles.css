@@ -171,7 +171,7 @@ p + p {
 
 .main-navigation {
 	color: #eee;
-	background: #555;
+	background: #444;
 	padding: 0;
 	font-size: 1.5rem;
 }
@@ -188,17 +188,18 @@ p + p {
 .main-navigation > ol > li > a {
 	padding: 0.625rem 0.875rem;
 	display: inline-block;
-	color: #fff;
+	color: #eee;
 	text-decoration: none;
 	text-transform: uppercase;	
 }
 .main-navigation > ol > li a:hover,
 .main-navigation > ol > li button:hover {
-	background: #14F;
+	color: #111;
+	background: #ccc;
 }
 .main-navigation > ol > li a:focus,
 .main-navigation > ol > li button:focus {
-	outline: dotted #fff 3px;
+	outline: dotted #111 3px;
 	outline-offset: -4px;
 }
 
@@ -211,7 +212,7 @@ main {
 }
 
 main + footer {
-	background: #555;
+	background: #444;
 	color: #fff;
 	font-size: 1.25rem;
 	padding: 1em 0;
