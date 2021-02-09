@@ -229,8 +229,25 @@ function addDropdownLinkMenu(node) {
 			// add id of toggle button to the link
 			subItem[j].setAttribute('data-menu-item-control', b.id);
 			subItem[j].addEventListener('blur', function(evt) {
-				console.log('blur');
-				console.log(evt);
+				let prevNode = evt.target;
+				let currNode = evt.relatedTarget;
+				if(currNode.nodeName == "A") {
+					// check if id of button equals data-menu-item-control
+					if(!currNode.hastAttribute('data-menu-item-control')) {
+						// moved out of list
+						let button = 	document.getElementById(prevNode.getAttribute('data-menu-item-control'));
+						button.setAttribute('aria-expanded', 'false');
+					}
+					else {
+						// check that the data-menu-item-control are the same
+						if(currNode.getAttribute('data-menu-item-control') != prevNode.getAttribute('data-menu-item-control')) {
+							let button = 	document.getElementById(prevNode.getAttribute('data-menu-item-control'));
+							button.setAttribute('aria-expanded', 'false');
+						}
+					}
+				} // end 'A' case
+				
+				
 			});
 		}
 		
