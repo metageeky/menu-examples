@@ -227,7 +227,7 @@ function addDropdownLinkMenu(node) {
 		let subItem = sub.querySelectorAll('li a');
 		for(let j=0; j<subItem.length; j++) {
 			// add id of toggle button to the link
-			subItem[j].addAttribute('data-menu-item-control', b.id);
+			subItem[j].setAttribute('data-menu-item-control', b.id);
 		}
 		
 	}
