@@ -228,6 +228,10 @@ function addDropdownLinkMenu(node) {
 		for(let j=0; j<subItem.length; j++) {
 			// add id of toggle button to the link
 			subItem[j].setAttribute('data-menu-item-control', b.id);
+			subitem[j].addEventListener('blur', function(evt) {
+				console.log('blur');
+				console.log(evt);
+			});
 		}
 		
 	}
