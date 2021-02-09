@@ -241,9 +241,11 @@ main + footer {
 	border: none;
 	padding: 0.625rem 0.25rem;
 }
-.dropdown-link-menu li button svg {
-	height: 0.5em;
-	width: 0.5em;
+.dropdown-link-menu li button svg.icon {
+	height: 0.625em;
+	width: 0.625em;
+	position: relative;
+	top: -2px;
 }
 
 .dropdown-link-menu li button[aria-expanded="false"] svg.icon.up {
