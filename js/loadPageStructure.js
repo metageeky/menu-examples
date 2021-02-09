@@ -306,24 +306,21 @@ function addDropdownLinkMenu(node) {
 				else { // already open, move to first item
 					node.nextElementSibling.querySelector('li a').focus();
 				}
-				return;
+				event.stopPropagation();
 			}
-			if(!node.hasAttribute('data-menu-item-control'))
-				return;
-			let p = node.parentElement;
-			
-			// now in a link in a dropdown menu
-			let b = document.getElementById(node.getAttribute('data-menu-item-control'));
-			let ol = b.nextElementSibling;
-			if(node.parentElement.nextElementSibling === null) {
-				// go to first item
-				ol.querySelector('li a').focus();
-			}
-			else {
-				// go down one
-				node.parentElement.nextElementSibling.querySelector('a').focus();
-			}
-			
+			else if(node.hasAttribute('data-menu-item-control')) {
+				// now in a link in a dropdown menu
+				let b = document.getElementById(node.getAttribute('data-menu-item-control'));
+				let ol = b.nextElementSibling;
+				if(node.parentElement.nextElementSibling === null) {
+					// go to first item
+					ol.querySelector('li a').focus();
+				}
+				else {
+					// go down one
+					node.parentElement.nextElementSibling.querySelector('a').focus();
+				}
+				event.stopPropagation();
 		}
 		
 	});
