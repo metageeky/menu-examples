@@ -79,7 +79,7 @@
 		</div>
 		<svg id="icons" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<symbol id="icon-right-triangle" viewBox="0 0 50 50">
-				<polygon points="0,0 0,50 43.3,25" style="fill:#000;stroke:#000;stroke-width:1">
+				<polygon points="0,0 0,50 43.3,25" style="fill:currentColor;stroke:currentColor;stroke-width:1">
 				</polygon>
 			</symbol>
 			<symbol id="icon-left-triangle" viewBox="0 0 50 50">
@@ -90,8 +90,8 @@
 				<polygon points="0,50 50,50 25.0,6.7" style="fill:#000;stroke:#000;stroke-width:1">
 				</polygon>
 			</symbol>
-			<symbol id="icon-down-triangle" viewBox="0 0 50 50">
-				<polygon points="0,0 50,0 25.0,43.3" style="fill:#000;stroke:#000;stroke-width:1">
+			<symbol id="icon-down-triangle" viewBox="0 0 50 43.3">
+				<polygon points="0,0 50,0 25.0,43.3" style="fill:currentColor;stroke:currentColor;stroke-width:1">
 				</polygon>
 			</symbol>
 		</svg>
@@ -143,6 +143,7 @@
 		window.onload = function() {
 			console.log('loaded: ' + Date.now());
 			LoadPageStructure();
+			loadMenu();
 		}
 	
 
