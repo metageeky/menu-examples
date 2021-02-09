@@ -227,9 +227,9 @@ p + p {
 	color: #111;
 	background: #ccc;
 }
-.main-navigation > ol > li a:focus,
-.main-navigation > ol > li button:focus {
+.main-navigation > ol > li a:focus {
 	text-decoration: underline dotted;
+	outline: none;
 }
 
 .main-navigation > ol > li > ol {
@@ -312,6 +312,7 @@ main + footer {
 }
 .main-navigation.dropdown-link-menu > ol > li > button[aria-expanded="true"] + ol {
 	display: block;
+	
 }
 
 
