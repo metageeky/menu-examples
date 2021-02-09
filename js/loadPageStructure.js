@@ -22,7 +22,7 @@ function LoadPageStructure() {
 		a.href = document.location.pathname + '?'
 		a.href += 'seed=' + seedFromString(p);
 		a.href += '&page=' + encodeURIComponent(p);
-		a.innerText = p;
+		a.textContent = p;
 		a.id = 'mainMenu' + p.replaceAll(' ','-');
 		li.appendChild(a);
 
@@ -38,7 +38,7 @@ function LoadPageStructure() {
 				a.href += 'seed=' + seedFromString(p + s);
 				a.href += '&page=' + encodeURIComponent(p);
 				a.href += '&subpage=' + encodeURIComponent(s);
-				a.innerText = s;
+				a.textContent = s;
 				a.id = 'mainMenu_' + p.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
 				sli.appendChild(a);
 			}
@@ -59,7 +59,7 @@ function LoadPageStructure() {
 		a.href = document.location.pathname + '?'
 		a.href += 'seed=' + seedFromString('Home');
 		a.href += '&page=' + encodeURIComponent('Home');
-		a.innerText = 'Home';
+		a.textContent = 'Home';
 		li.appendChild(a);
 
 		// Add page
@@ -73,7 +73,7 @@ function LoadPageStructure() {
 			a.href = document.location.pathname + '?'
 			a.href += 'seed=' + seedFromString(page);
 			a.href += '&page=' + encodeURIComponent(page);
-			a.innerText = page;
+			a.textContent = page;
 			li.appendChild(a);
 			li = document.createElement('li');;
 			ol.appendChild(li);
@@ -114,7 +114,7 @@ function LoadPageStructure() {
 			a.href += 'seed=' + seedFromString(p + s);
 			a.href += '&page=' + encodeURIComponent(p);
 			a.href += '&subpage=' + encodeURIComponent(s);
-			a.innerText = s;
+			a.textContent = s;
 			a.id = 'subMenu_' + p.replaceAll(' ','-') + '_' + s.replaceAll(' ','-');
 			if(s == subpage)
 				a.setAttribute('aria-current','page');
@@ -136,9 +136,9 @@ function LoadPageStructure() {
 
 	// H1
 	if(subpage === null)
-		document.getElementById('page-title').innerText = page;
+		document.getElementById('page-title').textContent = page;
 	else
-		document.getElementById('page-title').innerText = subpage;
+		document.getElementById('page-title').textContent = subpage;
 
 	// H2 and paragraphs
 	var main = document.getElementById('main-content');
@@ -159,7 +159,7 @@ function LoadPageStructure() {
 
 	for(let i=0; i<headings.length; i++) {
 		let h2 = document.createElement('h2');
-		h2.innerText = headings[i];
+		h2.textContent = headings[i];
 		h2.id = 'h2_' + headings[i].replaceAll(' ', '-');
 		main.appendChild(h2);
 
@@ -203,7 +203,8 @@ function addDropdownLinkMenu(node) {
 		let sub = topItem[i].querySelector('ol');
 		let a = topItem[i].querySelector('a');
 		let b = document.createElement('button');
-		b.setAttribute('aria-label', 'Show ' + a.innerText);
+		b.setAttribute('aria-label', 'Show ' + a.textContent);
+		b.setAttribute('aria-expanded', 'false');
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		topItem[i].insertBefore(b,sub);
 		
