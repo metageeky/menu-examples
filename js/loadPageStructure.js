@@ -201,7 +201,9 @@ function addDropdownLinkMenu(node) {
 		if(topItem[i].querySelector('ol') === null)
 			continue;
 		let sub = topItem[i].querySelector('ol');
+		let a = topItem[i].querySelector('a');
 		let b = document.createElement('button');
+		b.setAttribute('aria-label', 'Show ' + a.innerText);
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		topItem[i].insertBefore(b,sub);
 		
