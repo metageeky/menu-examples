@@ -208,6 +208,11 @@ function addDropdownLinkMenu(node) {
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		b.addEventListener('click', function(e) {
 			if(this.getAttribute('aria-expanded') == 'false') {
+				// open this disclosure menu and close any open ones
+				let opens = this.temp0.parentElement.parentElement.querySelectorAll('button[aria-expanded='true');
+				for(let j=0; j<opens.length; j++) {
+					opens[j].setAttribute('aria-expanded','false');
+				}
 				this.setAttribute('aria-expanded','true');
 			}
 			else {
