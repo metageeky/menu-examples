@@ -233,7 +233,7 @@ function addDropdownLinkMenu(node) {
 				let currNode = evt.relatedTarget;
 				if(currNode.nodeName == "A") {
 					// check if id of button equals data-menu-item-control
-					if(!currNode.hastAttribute('data-menu-item-control')) {
+					if(!currNode.hasAttribute('data-menu-item-control')) {
 						// moved out of list
 						let button = 	document.getElementById(prevNode.getAttribute('data-menu-item-control'));
 						button.setAttribute('aria-expanded', 'false');
