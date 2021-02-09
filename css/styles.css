@@ -199,8 +199,7 @@ p + p {
 }
 .main-navigation > ol > li a:focus,
 .main-navigation > ol > li button:focus {
-	outline: dotted #111 3px;
-	outline-offset: -4px;
+	text-decoration: underline dotted;
 }
 
 .main-navigation > ol > li > ol {
