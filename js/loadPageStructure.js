@@ -201,10 +201,12 @@ function addDropdownLinkMenu(node) {
 		if(topItem[i].querySelector('ol') === null)
 			continue;
 		let sub = topItem[i].querySelector('ol');
+		sub.classList.add('dropdown-menu');
 		let a = topItem[i].querySelector('a');
 		let b = document.createElement('button');
 		b.setAttribute('aria-label', 'Show ' + a.textContent);
 		b.setAttribute('aria-expanded', 'false');
+		b.classList.add('dropdown-menu-toggle');
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		b.addEventListener('click', function(e) {
 			if(this.getAttribute('aria-expanded') == 'false') {
@@ -221,14 +223,11 @@ function addDropdownLinkMenu(node) {
 		});
 		topItem[i].insertBefore(b,sub);
 	}
-	// Add escape listener to close 
+	// Add escape listener to close.
 	document.addEventListener('keydown', function(event){
 		if(event.key === "Escape") {
 			let node = event.target;
-			while(node != null && !p.classList.contains('dropdown-link-menu')) {
-				console.log(node);
-				node = node.parentElement;
-			}
+
 		}
 	});
 }
