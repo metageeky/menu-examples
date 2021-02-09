@@ -222,6 +222,27 @@ function addDropdownLinkMenu(node) {
 				this.setAttribute('aria-expanded','false');
 			}
 		});
+		
+		b.addEventListener('blur', function(evt) {
+			let prevNode = evt.target;
+			let currNode = evt.relatedTarget;
+			
+			if(currNode === null) {
+				// close button
+					prevNode.setAttribute('aria-expanded','false');
+			}
+			else if(currNode.nodeName == "A") {
+				// does the A have the data-menu-item-control as the button's id
+				if(prevNode.id != currNode.getAttribute('data-menu-item-control')) {
+					// close button
+					prevNode.setAttribute('aria-expanded','false');
+				}
+			}
+			else {
+				// close button
+				prevNode.setAttribute('aria-expanded','false');
+			}
+		});
 		topItem[i].insertBefore(b,sub);
 		
 		let subItem = sub.querySelectorAll('li a');
