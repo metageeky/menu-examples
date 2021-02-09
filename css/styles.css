@@ -249,11 +249,11 @@ main + footer {
 	display: none;
 }
 .dropdown-link-menu li button[aria-expanded="false"] svg.icon.down {
-	display: block;
+	display: inline-block;
 }
 .dropdown-link-menu li button[aria-expanded="true"] svg.icon.up {
-	display: block;
+	display: inline-block;
 }
 .dropdown-link-menu li button[aria-expanded="true"] svg.icon.down {
-	display: false;
+	display: none;
 }
