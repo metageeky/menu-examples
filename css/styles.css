@@ -217,3 +217,23 @@ main + footer {
 	text-transform: lowercase;
 	margin-top: 2rem;
 }
+
+
+
+// dropdown-link-menu
+
+nav.dropdown-link-menu > ol > li + li {
+	
+}
+
+.dropdown-link-menu li button {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.dropdown-link-menu li button svg {
+    height: 0.5em;
+    width: 0.5em;
+}
