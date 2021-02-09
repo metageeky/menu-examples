@@ -219,8 +219,13 @@ function addDropdownLinkMenu(node) {
 				this.setAttribute('aria-expanded','false');
 			}
 		});
-		
 		topItem[i].insertBefore(b,sub);
-		
 	}
+	// Add escape listener to close 
+	document.addEventListener('keydown', function(event){
+		if(event.key === "Escape") {
+			// find current focus and move up to determine if it's a dropdown
+			console.log(event);
+		}
+	});
 }
