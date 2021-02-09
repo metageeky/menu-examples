@@ -1,4 +1,4 @@
-function LoadPageStructure() {
+async function LoadPageStructure() {
 	// load everything but interpret later
 	var site = YAML.load('sitemap.yaml');
 	var urlParams = new URLSearchParams(window.location.search);
@@ -173,4 +173,23 @@ function LoadPageStructure() {
 	}
 	
 	console.log('end load structure');
+};
+
+async function loadMenu {
+	await LoadPageStructure(); // ensure structure is loaded
+	let menus = document.querySelectorAll('[data-menu-type]');
+	for(let i=0; i<menus.length; i++) {
+		let t = menus[i].getAttribute('data-menu-type');
+		switch (t) {
+			case 'dropdown-link':
+				addDropdownLinkMenu(menus[i]);
+				break;
+			default:
+				console.log('UNKNOWN MENU TYPE: ' + t);
+		}		
+	}
+}
+
+function addDropdownLinkMenu(node) {
+	
 }
