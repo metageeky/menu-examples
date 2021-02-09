@@ -206,6 +206,7 @@ function addDropdownLinkMenu(node) {
 		let b = document.createElement('button');
 		b.setAttribute('aria-label', 'Show ' + a.textContent);
 		b.setAttribute('aria-expanded', 'false');
+		b.id = a.id + '-toggle';
 		b.classList.add('dropdown-menu-toggle');
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		b.addEventListener('click', function(e) {
@@ -222,6 +223,13 @@ function addDropdownLinkMenu(node) {
 			}
 		});
 		topItem[i].insertBefore(b,sub);
+		
+		let subItem = sub.querySelectorAll('li a');
+		for(let j=0; j<subItem.length; j++) {
+			// add id of toggle button to the link
+			subItem[j].addAttribute('data-menu-item-control', b.id);
+		}
+		
 	}
 	// Add escape listener to close.
 	document.addEventListener('keydown', function(event){
