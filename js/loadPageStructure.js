@@ -14,7 +14,7 @@ function LoadPageStructure() {
 		subpage = urlParams.get('subpage');
 
 	// create main nav menu
-	var nav = document.querySelector('#main-navigation ol');
+	var nav = document.querySelector('.main-navigation ol');
 	for(p of Object.keys(site)) {
 		let li = document.createElement('li');
 		nav.appendChild(li)
