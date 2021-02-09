@@ -209,7 +209,7 @@ function addDropdownLinkMenu(node) {
 		b.addEventListener('click', function(e) {
 			if(this.getAttribute('aria-expanded') == 'false') {
 				// open this disclosure menu and close any open ones
-				let opens = this.temp0.parentElement.parentElement.querySelectorAll('button[aria-expanded='true');
+				let opens = this.temp0.parentElement.parentElement.querySelectorAll('button[aria-expanded='true']);
 				for(let j=0; j<opens.length; j++) {
 					opens[j].setAttribute('aria-expanded','false');
 				}
