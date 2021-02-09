@@ -191,5 +191,11 @@ async function loadMenu {
 }
 
 function addDropdownLinkMenu(node) {
-	
+	let ol = node.querySelector('ol');
+	if(ol === null) {
+		console.log('Dropdown / Link menu is missing ordered list');
+	topItem = ol.querySelectorAll('li');
+	for(let i=0; i < topItem.length; i++) {
+		
+	}
 }
