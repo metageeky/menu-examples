@@ -1,4 +1,4 @@
-async function LoadPageStructure() {
+function LoadPageStructure() {
 	// load everything but interpret later
 	var site = YAML.load('sitemap.yaml');
 	var urlParams = new URLSearchParams(window.location.search);
@@ -175,8 +175,7 @@ async function LoadPageStructure() {
 	console.log('end load structure');
 };
 
-async function loadMenu() {
-	await LoadPageStructure(); // ensure structure is loaded
+function loadMenu() {
 	let menus = document.querySelectorAll('[data-menu-type]');
 	for(let i=0; i<menus.length; i++) {
 		let t = menus[i].getAttribute('data-menu-type');
@@ -194,6 +193,8 @@ function addDropdownLinkMenu(node) {
 	let ol = node.querySelector('ol');
 	if(ol === null) {
 		console.log('Dropdown / Link menu is missing ordered list');
+		return;
+	}
 	topItem = ol.querySelectorAll('li');
 	for(let i=0; i < topItem.length; i++) {
 		
