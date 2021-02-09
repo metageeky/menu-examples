@@ -235,12 +235,25 @@ main + footer {
 }
 
 .dropdown-link-menu li button {
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    padding: 0.625rem 0.25rem;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	padding: 0.625rem 0.25rem;
 }
 .dropdown-link-menu li button svg {
-    height: 0.5em;
-    width: 0.5em;
+	height: 0.5em;
+	width: 0.5em;
+}
+
+.dropdown-link-menu li button[aria-expanded="false"] svg.icon.up {
+	display: none;
+}
+.dropdown-link-menu li button[aria-expanded="false"] svg.icon.down {
+	display: block;
+}
+.dropdown-link-menu li button[aria-expanded="true"] svg.icon.up {
+	display: block;
+}
+.dropdown-link-menu li button[aria-expanded="true"] svg.icon.down {
+	display: false;
 }
