@@ -175,7 +175,7 @@ async function LoadPageStructure() {
 	console.log('end load structure');
 };
 
-async function loadMenu {
+async function loadMenu() {
 	await LoadPageStructure(); // ensure structure is loaded
 	let menus = document.querySelectorAll('[data-menu-type]');
 	for(let i=0; i<menus.length; i++) {
