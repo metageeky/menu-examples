@@ -282,7 +282,7 @@ function addDropdownLinkMenu(node) {
 	}
 	// Add escape listener to close.
 	document.addEventListener('keydown', function(event){
-		if(event.key === "Escape") {
+		if(event.key === 'Escape') {
 			let node = event.target;
 			if(node.classList.contains('dropdown-menu-toggle')) {
 				// close menu
@@ -295,5 +295,36 @@ function addDropdownLinkMenu(node) {
 			b.setAttribute('aria-expanded', 'false');
 			b.focus();
 		}
+		else if(event.key === 'ArrowDown') {
+			let node = event.target;
+			if(node.classList.contains('dropdown-menu-toggle')) {
+				
+				if(node.getAttribute('aria-expanded') == 'false') {
+					// open menu 
+					node.setAttribute('aria-expanded','true');
+				}
+				else { // already open, move to first item
+					node.nextElementSibling.querySelector('li a').focus();
+				}
+				return;
+			}
+			if(!node.hasAttribute('data-menu-item-control'))
+				return;
+			let p = node.parentElement;
+			
+			// now in a link in a dropdown menu
+			let b = document.getElementById(node.getAttribute('data-menu-item-control'));
+			let ol = b.nextElementSibling;
+			if(node.parentElement.nextElementSibling === null) {
+				// go to first item
+				ol.querySelector('li a').focus();
+			}
+			else {
+				// go down one
+				node.parentElement.nextElementSibling.querySelector('a').focus();
+			}
+			
+		}
+		
 	});
 }
