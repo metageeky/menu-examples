@@ -235,7 +235,11 @@ function addDropdownLinkMenu(node) {
 	document.addEventListener('keydown', function(event){
 		if(event.key === "Escape") {
 			let node = event.target;
-
+			if(!node.hasAttribute('data-menu-item-control'))
+				return;
+			let b = document.getElementById(node.hasAttribute('data-menu-item-control'));
+			b.setAttribute('aria-expanded', 'false');
+			b.focus();
 		}
 	});
 }
