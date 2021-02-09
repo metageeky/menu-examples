@@ -222,15 +222,18 @@ p + p {
 	text-decoration: none;
 	text-transform: uppercase;	
 }
-.main-navigation > ol > li a:hover {
+.main-navigation > ol > li a:hover,
+.main-navigation > ol > li button:hover{
 	color: #111;
 	background: #ccc;
 }
-.main-navigation > ol > li a:focus {
+.main-navigation > ol > li a:focus,
+.main-navigation > ol > li button:focus {
 	outline: dotted #FFF 3px;
 	outline-offset: -3px;
 }
-.main-navigation > ol > li a:focus:hover {
+.main-navigation > ol > li a:focus:hover,
+.main-navigation > ol > li button:focus:hover {
 	outline: dotted #000 3px;
 	outline-offset: -3px;
 }
@@ -261,7 +264,7 @@ main + footer {
 }
 
 .main-navigation.dropdown-link-menu > ol > li a {
-	padding: 0.625rem 0.25rem;
+	padding: 0.625rem 0.3125rem;
 }
 
 .main-navigation.dropdown-link-menu > ol > li:first-of-type {
@@ -276,21 +279,16 @@ main + footer {
 .main-navigation.dropdown-link-menu > ol > li + li {
 	margin-left: 1rem;
 }
-,
-.main-navigation.dropdown-link-menu > ol > li button:hover {
-	color: #111;
-	background: #ccc;
-}
-.main-navigation.dropdown-link-menu > ol > li button:hover {
-	color: #111;
-	background: #ccc;
+.main-navigation.dropdown-link-menu > ol > li a:focus:hover,
+.main-navigation.dropdown-link-menu > ol > li button:focus:hover {
+	outline-offset: -4px;
 }
 
 .dropdown-link-menu li button {
 	color: #fff;
 	background-color: transparent;
 	border: none;
-	padding: 0.625rem 0.5rem;
+	padding: 0.625rem 0.5625rem;
 	line-height: inherit;
 }
 .dropdown-link-menu li button svg.icon {
