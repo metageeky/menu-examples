@@ -224,8 +224,13 @@ function addDropdownLinkMenu(node) {
 	// Add escape listener to close 
 	document.addEventListener('keydown', function(event){
 		if(event.key === "Escape") {
-			// find current focus and move up to determine if it's a dropdown
-			console.log(event);
+			let node = event.target;
+			if(node.parentElement === null)
+				return;
+			node = node.parentElement;
+			if(node.parentElement === null)
+				return;
+			console.log(node);
 		}
 	});
 }
