@@ -230,7 +230,7 @@ main + footer {
 #main-navigation.dropdown-link-menu > ol > li + li {
 	margin-left: 1rem;
 }
-#main-navigation#main-navigation. > ol > li button:focus {
+#main-navigation.dropdown-link-menu > ol > li button:focus {
 	outline-offset: -3px;
 }
 
