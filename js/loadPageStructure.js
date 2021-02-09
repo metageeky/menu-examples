@@ -307,6 +307,7 @@ function addDropdownLinkMenu(node) {
 					node.nextElementSibling.querySelector('li a').focus();
 				}
 				event.stopPropagation();
+				event.preventDefault();
 			}
 			else if(node.hasAttribute('data-menu-item-control')) {
 				// now in a link in a dropdown menu
@@ -321,6 +322,7 @@ function addDropdownLinkMenu(node) {
 					node.parentElement.nextElementSibling.querySelector('a').focus();
 				}
 				event.stopPropagation();
+				event.preventDefault();
 			}
 		}
 	});
