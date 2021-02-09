@@ -230,8 +230,8 @@ main + footer {
 #main-navigation.dropdown-link-menu > ol > li + li {
 	margin-left: 1rem;
 }
-#main-navigation.dropdown-link-menu > ol > li > a:hover {
-	
+#main-navigation#main-navigation. > ol > li button:focus {
+	outline-offset: -3px;
 }
 
 .dropdown-link-menu li button {
@@ -239,7 +239,7 @@ main + footer {
     background-color: transparent;
     border: none;
     background: transparent;
-    padding: 0;
+    padding: 0.625rem 0.25rem;
 }
 .dropdown-link-menu li button svg {
     height: 0.5em;
