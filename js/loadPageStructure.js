@@ -298,7 +298,6 @@ function addDropdownLinkMenu(node) {
 		else if(event.key === 'ArrowDown') {
 			let node = event.target;
 			if(node.classList.contains('dropdown-menu-toggle')) {
-				
 				if(node.getAttribute('aria-expanded') == 'false') {
 					// open menu 
 					node.setAttribute('aria-expanded','true');
@@ -321,6 +320,24 @@ function addDropdownLinkMenu(node) {
 					// go down one
 					node.parentElement.nextElementSibling.querySelector('a').focus();
 				}
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		}
+		else if(event.key === 'ArrowUp') {
+			let node = event.target;
+			if(node.hasAttribute('data-menu-item-control')) {
+				// now in a link in a dropdown menu
+				let b = document.getElementById(node.getAttribute('data-menu-item-control'));
+				let ol = b.nextElementSibling;
+				if(node.parentElement.previousElementSibling === null) {
+					ol.querySelector('li:last-of-type a').focus();
+				}
+				else {
+					// go to previous
+					node.parentElement.previousElementSibling.querySelector('a').focus();
+				}
+				
 				event.stopPropagation();
 				event.preventDefault();
 			}
