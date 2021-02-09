@@ -207,8 +207,12 @@ function addDropdownLinkMenu(node) {
 		b.setAttribute('aria-expanded', 'false');
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		b.addEventListener('click', function(e) {
-			console.log(e);
-			console.log(this);
+			if(this.getAttribute('aria-expanded') == 'false') {
+				this.setAttribute('aria-expanded','true');
+			}
+			else {
+				this.setAttribute('aria-expanded','false');
+			}
 		});
 		
 		topItem[i].insertBefore(b,sub);
