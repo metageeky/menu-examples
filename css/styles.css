@@ -28,11 +28,11 @@ banner div.page-centered-content {
 }
 
 #menuType {
-	padding: 1rem;
+	padding: 0.75rem;
 	font-size: 1.5rem;
 	text-transform: lowercase;
 	color: #fff;
-	background: ##7815b0;
+	background: #7815b0;
 }
 
 h1 {
@@ -111,34 +111,8 @@ p + p {
 }
 #sub-navigation a[aria-current] {
 	font-style: italic;
-	display: flex;
-	align-content: center;
-	align-items: center;
-	margin-left: -0.625rem;
+	font-weight: 600;
 }
-#sub-navigation a[aria-current]:before {
-	content: "";
-	display: inline-block;
-	width: 0.625rem;
-	height: 0.625rem;
-	background-image: url('../assets/right-arrow.svg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	margin-right: 2px;
-}
-#sub-navigation a[aria-current]:after {
-	content: "";
-	display: inline-block;
-	width: 0.625rem;
-	height: 0.625rem;
-	background-image: url('../assets/left-arrow.svg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	margin-left: 3px;
-}
-
 #sub-navigation {
 	padding: 0.25rem 0.75rem;
 	border: solid 2px #000;
