@@ -321,7 +321,7 @@ function addDropdownLinkMenu(node) {
 					node.parentElement.nextElementSibling.querySelector('a').focus();
 				}
 				event.stopPropagation();
+			}
 		}
-		
 	});
 }
