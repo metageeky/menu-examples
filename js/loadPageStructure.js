@@ -208,6 +208,7 @@ function addDropdownLinkMenu(node) {
 		b.innerHTML = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
 		b.addEventListener('click', function(e) {
 			console.log(e);
+			console.log(this);
 		});
 		
 		topItem[i].insertBefore(b,sub);
