@@ -20,6 +20,10 @@
 	unicode-range: U+00A0-00A8, U+00C0-024F, U+201E-2026;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 *:focus {
 	outline: dotted #14F 3px;
 	outline-offset: 2px;
@@ -265,6 +269,9 @@ main + footer {
 
 .main-navigation.dropdown-link-menu > ol > li a {
 	padding: 0.625rem 0.3125rem;
+	white-space: nowrap;
+	text-decoration: none;
+	color: #fff;
 }
 
 .main-navigation.dropdown-link-menu > ol > li:first-of-type {
@@ -312,7 +319,21 @@ main + footer {
 
 .main-navigation.dropdown-link-menu > ol > li > ol {
 	position: absolute;
+	background: #444;
+	list-style: none;
+	padding: 0;
+	z-index: 5;
+	top: 100%;
 }
+.main-navigation.dropdown-link-menu > ol > li > ol > li {
+
+}
+.main-navigation.dropdown-link-menu > ol > li > ol > li > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
 .main-navigation.dropdown-link-menu > ol > li > button[aria-expanded="false"] + ol {
 	display: none;
 }
