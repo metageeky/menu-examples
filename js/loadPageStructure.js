@@ -230,23 +230,25 @@ function addDropdownLinkMenu(node) {
 			subItem[j].setAttribute('data-menu-item-control', b.id);
 			subItem[j].addEventListener('blur', function(evt) {
 				let prevNode = evt.target;
+				let prevTogId = prevNode.getAttribute('data-menu-item-control');
 				let currNode = evt.relatedTarget;
 				if(currNode.nodeName == "A") {
-					// check if id of button equals data-menu-item-control
-					if(!currNode.hasAttribute('data-menu-item-control')) {
-						// moved out of list
-						let button = 	document.getElementById(prevNode.getAttribute('data-menu-item-control'));
-						button.setAttribute('aria-expanded', 'false');
-					}
-					else {
-						// check that the data-menu-item-control are the same
-						if(currNode.getAttribute('data-menu-item-control') != prevNode.getAttribute('data-menu-item-control')) {
-							let button = 	document.getElementById(prevNode.getAttribute('data-menu-item-control'));
-							button.setAttribute('aria-expanded', 'false');
-						}
+					if(prevTogId != currNode.getAttribute('data-menu-item-control')) {
+						// close button
+						document.getElementById(prevTogId).setAttribute('aria-expanded','false');
 					}
 				} // end 'A' case
-				
+				else if(currNode.nodeName == 'BUTTON') {
+					// check that prevTogId is button's id
+					if(prevTogId != currNode.id) {
+						// close button
+						document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+					}
+				}
+				else {
+					// close button
+					document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+				}
 				
 			});
 		}
