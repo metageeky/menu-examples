@@ -190,6 +190,7 @@ function loadMenu() {
 }
 
 function addDropdownLinkMenu(node) {
+	node.classList.add('dropdown-link-menu');
 	let ol = node.querySelector('ol');
 	if(ol === null) {
 		console.log('Dropdown / Link menu is missing ordered list');
@@ -197,6 +198,13 @@ function addDropdownLinkMenu(node) {
 	}
 	topItem = ol.querySelectorAll('li');
 	for(let i=0; i < topItem.length; i++) {
+		if(topItem[i].querySelector('ol') === null)
+			continue;
+		let sub = topItem[i].querySelector('ol');
+		let b = document.createElement('button');
+		
+		b.innerHtml = '<svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-down-triangle" /></svg>';
+		topItem[i].insertBefore(b,sub);
 		
 	}
 }
