@@ -225,12 +225,10 @@ function addDropdownLinkMenu(node) {
 	document.addEventListener('keydown', function(event){
 		if(event.key === "Escape") {
 			let node = event.target;
-			if(node.parentElement === null)
-				return;
-			node = node.parentElement;
-			if(node.parentElement === null)
-				return;
-			console.log(node);
+			while(node != null && !p.classList.contains('dropdown-link-menu')) {
+				console.log(node);
+				node = node.parentElement;
+			}
 		}
 	});
 }
