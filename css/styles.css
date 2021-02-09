@@ -219,25 +219,26 @@ p + p {
 	display: inline-block;
 }
 
-.main-navigation > ol > li > a {
+.main-navigation > ol li a {
 	padding: 0.625rem 0.875rem;
 	display: inline-block;
 	color: #eee;
 	text-decoration: none;
-	text-transform: uppercase;	
+	text-transform: uppercase;
+	white-space: nowrap;
 }
-.main-navigation > ol > li a:hover,
-.main-navigation > ol > li button:hover{
+.main-navigation > ol li a:hover,
+.main-navigation > ol li button:hover{
 	color: #111;
 	background: #ccc;
 }
-.main-navigation > ol > li a:focus,
-.main-navigation > ol > li button:focus {
+.main-navigation > ol li a:focus,
+.main-navigation > ol li button:focus {
 	outline: dotted #FFF 3px;
 	outline-offset: -3px;
 }
-.main-navigation > ol > li a:focus:hover,
-.main-navigation > ol > li button:focus:hover {
+.main-navigation > ol li a:focus:hover,
+.main-navigation > ol li button:focus:hover {
 	outline: dotted #000 3px;
 	outline-offset: -3px;
 }
@@ -270,8 +271,6 @@ main + footer {
 .main-navigation.dropdown-link-menu > ol > li a {
 	padding: 0.625rem 0.3125rem;
 	white-space: nowrap;
-	text-decoration: none;
-	color: #fff;
 }
 
 .main-navigation.dropdown-link-menu > ol > li:first-of-type {
@@ -286,8 +285,8 @@ main + footer {
 .main-navigation.dropdown-link-menu > ol > li + li {
 	margin-left: 1rem;
 }
-.main-navigation.dropdown-link-menu > ol > li a:focus:hover,
-.main-navigation.dropdown-link-menu > ol > li button:focus:hover {
+.main-navigation.dropdown-link-menu > ol li a:focus:hover,
+.main-navigation.dropdown-link-menu > ol li button:focus:hover {
 	outline-offset: -4px;
 }
 
@@ -324,13 +323,15 @@ main + footer {
 	padding: 0;
 	z-index: 5;
 	top: 100%;
+	right: 0;
 }
 .main-navigation.dropdown-link-menu > ol > li > ol > li {
 
 }
 .main-navigation.dropdown-link-menu > ol > li > ol > li > a {
-	text-decoration: none;
-	color: #fff;
+	display: block;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 
