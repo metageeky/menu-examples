@@ -183,10 +183,175 @@ function loadMenu() {
 			case 'dropdown-link':
 				addDropdownLinkMenu(menus[i]);
 				break;
+			case 'dropdown-only':
+				addDropdownOnlyMenu(menus[i]);
+				break;
 			default:
 				console.log('UNKNOWN MENU TYPE: ' + t);
 		}		
 	}
+}
+
+function addDropdownOnlyMenu(node) {
+	node.classList.add('dropdown-only-menu');
+	let ol = node.querySelector('ol');
+	if(ol === null) {
+		console.log('Dropdown-Only menu is missing ordered list');
+		return;
+	}
+	topItem = ol.querySelectorAll('li');
+	for(let i=0; i < topItem.length; i++) {
+		if(topItem[i].querySelector('ol') === null)
+			continue;
+		let sub = topItem[i].querySelector('ol');
+		sub.classList.add('dropdown-menu');
+		let a = topItem[i].querySelector('a');
+		// move link into the sub
+		let newLi = document.createElement('li');
+		newLi.appendChild('a');
+		sub.prepend(newLi);
+		
+		let b = document.createElement('button');
+		b.setAttribute('aria-label', 'Show ' + a.textContent);
+		b.setAttribute('aria-expanded', 'false');
+		b.id = a.id + '-toggle';
+		b.classList.add('dropdown-menu-toggle');
+		b.innerHTML = a.textContent + ' <svg class="icon down"><use xlink:href="#icon-down-triangle" /></svg><svg class="icon up"><use xlink:href="#icon-up-triangle" /></svg>';
+		
+		b.addEventListener('click', function(e) {
+			if(this.getAttribute('aria-expanded') == 'false') {
+				// open this disclosure menu and close any open ones
+				let opens = this.parentElement.parentElement.querySelectorAll('button[aria-expanded="true"]');
+				for(let j=0; j<opens.length; j++) {
+					opens[j].setAttribute('aria-expanded','false');
+				}
+				this.setAttribute('aria-expanded','true');
+			}
+			else {
+				this.setAttribute('aria-expanded','false');
+			}
+		});
+		
+		b.addEventListener('blur', function(evt) {
+			let prevNode = evt.target;
+			let currNode = evt.relatedTarget;
+			
+			if(currNode === null) {
+				// close button
+					prevNode.setAttribute('aria-expanded','false');
+			}
+			else if(currNode.nodeName == "A") {
+				// does the A have the data-menu-item-control as the button's id
+				if(prevNode.id != currNode.getAttribute('data-menu-item-control')) {
+					// close button
+					prevNode.setAttribute('aria-expanded','false');
+				}
+			}
+			else {
+				// close button
+				prevNode.setAttribute('aria-expanded','false');
+			}
+		});
+		topItem[i].insertBefore(b,sub);
+		
+		let subItem = sub.querySelectorAll('li a');
+		for(let j=0; j<subItem.length; j++) {
+			// add id of toggle button to the link
+			subItem[j].setAttribute('data-menu-item-control', b.id);
+			subItem[j].addEventListener('blur', function(evt) {
+				let prevNode = evt.target;
+				let prevTogId = prevNode.getAttribute('data-menu-item-control');
+				let currNode = evt.relatedTarget;
+				
+				if(currNode === null) {
+					// close button
+					document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+				}
+				else if(currNode.nodeName == "A") {
+					if(prevTogId != currNode.getAttribute('data-menu-item-control')) {
+						// close button
+						document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+					}
+				} // end 'A' case
+				else if(currNode.nodeName == 'BUTTON') {
+					// check that prevTogId is button's id
+					if(prevTogId != currNode.id) {
+						// close button
+						document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+					}
+				}
+				else {
+					// close button
+					document.getElementById(prevTogId).setAttribute('aria-expanded','false');
+				}
+				
+			});
+		}
+		
+	}
+	// Add escape listener to close.
+	document.addEventListener('keydown', function(event){
+		if(event.key === 'Escape') {
+			let node = event.target;
+			if(node.classList.contains('dropdown-menu-toggle')) {
+				// close menu
+				node.setAttribute('aria-expanded', 'false');
+				return;
+			}
+			if(!node.hasAttribute('data-menu-item-control'))
+				return;
+			let b = document.getElementById(node.getAttribute('data-menu-item-control'));
+			b.setAttribute('aria-expanded', 'false');
+			b.focus();
+		}
+		else if(event.key === 'ArrowDown') {
+			let node = event.target;
+			if(node.classList.contains('dropdown-menu-toggle')) {
+				if(node.getAttribute('aria-expanded') == 'false') {
+					// open menu 
+					node.setAttribute('aria-expanded','true');
+				}
+				else { // already open, move to first item
+					node.nextElementSibling.querySelector('li a').focus();
+				}
+				event.stopPropagation();
+				event.preventDefault();
+			}
+			else if(node.hasAttribute('data-menu-item-control')) {
+				// now in a link in a dropdown menu
+				let b = document.getElementById(node.getAttribute('data-menu-item-control'));
+				let ol = b.nextElementSibling;
+				if(node.parentElement.nextElementSibling === null) {
+					// go to first item
+					ol.querySelector('li a').focus();
+				}
+				else {
+					// go down one
+					node.parentElement.nextElementSibling.querySelector('a').focus();
+				}
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		}
+		else if(event.key === 'ArrowUp') {
+			let node = event.target;
+			if(node.hasAttribute('data-menu-item-control')) {
+				// now in a link in a dropdown menu
+				let b = document.getElementById(node.getAttribute('data-menu-item-control'));
+				let ol = b.nextElementSibling;
+				if(node.parentElement.previousElementSibling === null) {
+					ol.querySelector('li:last-of-type a').focus();
+				}
+				else {
+					// go to previous
+					node.parentElement.previousElementSibling.querySelector('a').focus();
+				}
+				
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		}
+	});
 }
 
 function addDropdownLinkMenu(node) {

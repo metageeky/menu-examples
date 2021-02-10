@@ -267,12 +267,10 @@ main + footer {
 .main-navigation.dropdown-link-menu > ol > li {
 	position: relative;
 }
-
 .main-navigation.dropdown-link-menu > ol > li a {
 	padding: 0.625rem 0.3125rem;
 	white-space: nowrap;
 }
-
 .main-navigation.dropdown-link-menu > ol > li:first-of-type {
 	margin-left: calc(15px - 0.25rem);
 }
@@ -281,7 +279,6 @@ main + footer {
 		margin-left: 0;
 	}
 }
-
 .main-navigation.dropdown-link-menu > ol > li + li {
 	margin-left: 1rem;
 }
@@ -289,7 +286,6 @@ main + footer {
 .main-navigation.dropdown-link-menu > ol li button:focus:hover {
 	outline-offset: -4px;
 }
-
 .dropdown-link-menu li button {
 	color: #fff;
 	background-color: transparent;
@@ -302,7 +298,6 @@ main + footer {
 	width: 0.625em;
 	position: relative;
 }
-
 .dropdown-link-menu li button[aria-expanded="false"] svg.icon.up {
 	display: none;
 }
@@ -315,7 +310,6 @@ main + footer {
 .dropdown-link-menu li button[aria-expanded="true"] svg.icon.down {
 	display: none;
 }
-
 .main-navigation.dropdown-link-menu > ol > li > ol {
 	position: absolute;
 	background: #444;
@@ -325,22 +319,85 @@ main + footer {
 	top: 100%;
 	right: 0;
 }
-.main-navigation.dropdown-link-menu > ol > li > ol > li {
-
-}
 .main-navigation.dropdown-link-menu > ol > li > ol > li > a {
 	display: block;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
-
-
 .main-navigation.dropdown-link-menu > ol > li > button[aria-expanded="false"] + ol {
 	display: none;
 }
 .main-navigation.dropdown-link-menu > ol > li > button[aria-expanded="true"] + ol {
 	display: block;
-	
+}
+
+
+/* dropdown-only-menu */
+.main-navigation.dropdown-only-menu > ol > li {
+	position: relative;
+}
+.main-navigation.dropdown-only-menu > ol > li a {
+	padding: 0.625rem 0.3125rem;
+	white-space: nowrap;
+}
+.main-navigation.dropdown-only-menu > ol > li:first-of-type {
+	margin-left: calc(15px - 0.25rem);
+}
+@media screen and (min-width: 900px) {
+	.main-navigation.dropdown-only-menu > ol > li:first-of-type {
+		margin-left: 0;
+	}
+}
+.main-navigation.dropdown-only-menu > ol > li + li {
+	margin-left: 1rem;
+}
+.main-navigation.dropdown-only-menu > ol li a:focus:hover,
+.main-navigation.dropdown-only-menu > ol li button:focus:hover {
+	outline-offset: -4px;
+}
+.dropdown-only-menu li button {
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	padding: 0.625rem 0.5625rem;
+	line-height: inherit;
+}
+.dropdown-only-menu li button svg.icon {
+	height: 0.625em;
+	width: 0.625em;
+	position: relative;
+}
+.dropdown-only-menu li button[aria-expanded="false"] svg.icon.up {
+	display: none;
+}
+.dropdown-only-menu li button[aria-expanded="false"] svg.icon.down {
+	display: inline-block;
+}
+.dropdown-only-menu li button[aria-expanded="true"] svg.icon.up {
+	display: inline-block;
+}
+.dropdown-only-menu li button[aria-expanded="true"] svg.icon.down {
+	display: none;
+}
+.main-navigation.dropdown-only-menu > ol > li > ol {
+	position: absolute;
+	background: #444;
+	list-style: none;
+	padding: 0;
+	z-index: 5;
+	top: 100%;
+	right: 0;
+}
+.main-navigation.dropdown-only-menu > ol > li > ol > li > a {
+	display: block;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.main-navigation.dropdown-only-menu > ol > li > button[aria-expanded="false"] + ol {
+	display: none;
+}
+.main-navigation.dropdown-only-menu > ol > li > button[aria-expanded="true"] + ol {
+	display: block;
 }
 
 
