@@ -25,7 +25,7 @@
 }
 
 *:focus {
-	outline: dotted #203299 3px;
+	outline: dotted #2B72D7 3px;
 	outline-offset: 2px;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 a, a:visited {
-	color: #203299;
+	color: #2B72D7;
 }
 
 banner div.page-centered-content {
@@ -63,7 +63,7 @@ banner div.page-centered-content {
 	padding: 0.75rem;
 	font-size: 1.5rem;
 	text-transform: lowercase;
-	color: #f0f0f0;
+	color: #fff;
 	background: #7815b0;
 }
 
@@ -101,9 +101,10 @@ p + p {
 	margin: 5px;
 	line-height: 1.75em;
 	padding: 10px;
-	color: #f0f0f0 !important;
-	background-color: #203299;
+	color: #fff !important;
+	background-color: #2B72D7;
 	z-index: 2000;
+	font-size: 1.125rem;
 }
 
 .skipnavlink:focus {
@@ -253,7 +254,7 @@ main {
 
 main + footer {
 	background: #404040;
-	color: #f0f0f0;
+	color: #fff;
 	font-size: 1.25rem;
 	padding: 1em 0;
 	text-align: center;
