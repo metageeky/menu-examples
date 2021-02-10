@@ -234,8 +234,8 @@ p + p {
 }
 .main-navigation > ol li a:hover,
 .main-navigation > ol li button:hover{
-	color: #000;
-	background: #ccc;
+	color: #fff;
+	background: #F76900;
 }
 .main-navigation > ol li a:focus,
 .main-navigation > ol li button:focus {
@@ -244,7 +244,7 @@ p + p {
 }
 .main-navigation > ol li a:focus:hover,
 .main-navigation > ol li button:focus:hover {
-	outline: dotted #000 3px;
+	outline: dotted #fff 3px;
 	outline-offset: -3px;
 }
 
