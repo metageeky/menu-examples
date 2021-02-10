@@ -258,7 +258,7 @@ function addDropdownOnlyMenu(node) {
 		for(let j=0; j<subItem.length; j++) {
 			// add id of toggle button to the link
 			subItem[j].setAttribute('data-menu-item-control', b.id);
-	/* 		subItem[j].addEventListener('blur', function(evt) { */
+/* 	 		subItem[j].addEventListener('blur', function(evt) { 
 				let prevNode = evt.target;
 				let prevTogId = prevNode.getAttribute('data-menu-item-control');
 				let currNode = evt.relatedTarget;
@@ -284,8 +284,7 @@ function addDropdownOnlyMenu(node) {
 					// close button
 					document.getElementById(prevTogId).setAttribute('aria-expanded','false');
 				}
-				
-			});
+			}); */
 		}
 		
 	}
