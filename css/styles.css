@@ -389,6 +389,9 @@ nav#main-nav > ol > li::before {
 	padding: 0.625rem 0.5625rem;
 	line-height: inherit;
 }
+.dropdown-only-menu li button[aria-expanded="true"] {
+	background: #707780;
+}
 .dropdown-only-menu li button svg.icon {
 	height: 0.625em;
 	width: 0.625em;
@@ -408,7 +411,7 @@ nav#main-nav > ol > li::before {
 }
 .main-navigation.dropdown-only-menu > ol > li > ol {
 	position: absolute;
-	background: #000E54;
+	background: #707780;
 	list-style: none;
 	padding: 0;
 	z-index: 5;
