@@ -232,7 +232,7 @@ function addDropdownOnlyMenu(node) {
 			}
 		});
 		
-		/* b.addEventListener('blur', function(evt) {
+		b.addEventListener('blur', function(evt) {
 			let prevNode = evt.target;
 			let currNode = evt.relatedTarget;
 			
@@ -251,14 +251,14 @@ function addDropdownOnlyMenu(node) {
 				// close button
 				prevNode.setAttribute('aria-expanded','false');
 			}
-		}); */
+		}); 
 		topItem[i].insertBefore(b,sub);
 		
 		let subItem = sub.querySelectorAll('li a');
 		for(let j=0; j<subItem.length; j++) {
 			// add id of toggle button to the link
 			subItem[j].setAttribute('data-menu-item-control', b.id);
-/* 	 		subItem[j].addEventListener('blur', function(evt) { 
+			subItem[j].addEventListener('blur', function(evt) { 
 				let prevNode = evt.target;
 				let prevTogId = prevNode.getAttribute('data-menu-item-control');
 				let currNode = evt.relatedTarget;
@@ -284,9 +284,8 @@ function addDropdownOnlyMenu(node) {
 					// close button
 					document.getElementById(prevTogId).setAttribute('aria-expanded','false');
 				}
-			}); */
+			}); 
 		}
-		
 	}
 	// Add escape listener to close.
 	document.addEventListener('keydown', function(event){
