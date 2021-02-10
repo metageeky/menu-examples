@@ -130,7 +130,7 @@ function LoadPageStructure() {
 
 	// title update
 	document.title = document.getElementById('menuType').textContent;
-	document.title += '| ' + page;
+	document.title += ' | ' + page;
 	if(subpage != null)
 		document.title += ' - ' + subpage;
 	document.title += ' | SU Libraries';
