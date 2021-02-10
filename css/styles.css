@@ -134,6 +134,11 @@ p + p {
 	max-width: 200px;
 }
 
+#sub-navigation {
+	display: none;
+	padding: 0.25rem 0.75rem;
+	border: solid 2px #000;
+}
 #sub-navigation a {
 	text-decoration: none;
 	font-weight: 400;
@@ -144,10 +149,6 @@ p + p {
 #sub-navigation a[aria-current] {
 	font-style: italic;
 	font-weight: 600;
-}
-#sub-navigation {
-	padding: 0.25rem 0.75rem;
-	border: solid 2px #000;
 }
 #sub-navigation h2 {
 	white-space: nowrap;

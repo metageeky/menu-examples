@@ -82,7 +82,6 @@ function LoadPageStructure() {
 	}
 
 	// sub nav
-	
 	if('subpages' in site[page]) {
 		let p = page;
 		let h2 = document.querySelector('#sub-navigation h2');
@@ -121,6 +120,7 @@ function LoadPageStructure() {
 			sli.appendChild(a);
 			sli.appendChild(arrow2.cloneNode(true));
 		}
+		document.getElementById('sub-navigation').style.display = 'block';
 	}
 	else {
 		document.getElementById('sidebar').style.display = 'none';
