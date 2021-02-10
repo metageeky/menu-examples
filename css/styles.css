@@ -396,6 +396,7 @@ nav#main-nav > ol > li::before {
 	height: 0.625em;
 	width: 0.625em;
 	position: relative;
+	top: -1px;
 }
 .dropdown-only-menu li button[aria-expanded="false"] svg.icon.up {
 	display: none;

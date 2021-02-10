@@ -6,7 +6,7 @@ function LoadPageStructure() {
 	if(urlParams.has('seed'))
 		seed = urlParams.get('seed');
 	var random = new PseudoRandom(seed);
-	var page = "Home";
+	var page = 'Home';
 	if(urlParams.has('page'))
 		page = urlParams.get('page');
 	var subpage = null;
@@ -19,8 +19,9 @@ function LoadPageStructure() {
 		let li = document.createElement('li');
 		nav.appendChild(li)
 		let a = document.createElement('a');
-		a.href = document.location.pathname + '?'
-		a.href += 'seed=' + seedFromString(p);
+		a.href = document.location.pathname + '?';
+		if(page != 'Home')
+			a.href += 'seed=' + seedFromString(p);
 		a.href += '&page=' + encodeURIComponent(p);
 		a.textContent = p;
 		a.id = 'mainMenu' + p.replaceAll(' ','-');
