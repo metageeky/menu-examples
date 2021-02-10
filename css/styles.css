@@ -223,19 +223,19 @@ p + p {
 .main-navigation > ol li a {
 	padding: 0.625rem 0.875rem;
 	display: inline-block;
-	color: #eee;
+	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
 }
 .main-navigation > ol li a:hover,
 .main-navigation > ol li button:hover{
-	color: #101010;
+	color: #000;
 	background: #ccc;
 }
 .main-navigation > ol li a:focus,
 .main-navigation > ol li button:focus {
-	outline: dotted #f0f0f0 3px;
+	outline: dotted #fff 3px;
 	outline-offset: -3px;
 }
 .main-navigation > ol li a:focus:hover,
