@@ -220,13 +220,17 @@ p + p {
 	display: inline-block;
 }
 
-.main-navigation > ol li a {
-	padding: 0.625rem 0.875rem;
-	display: inline-block;
+.main-navigation > ol li a,
+.main-navigation > ol li button {
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
+}
+
+.main-navigation > ol li a {
+	padding: 0.625rem 0.875rem;
+	display: inline-block;
 }
 .main-navigation > ol li a:hover,
 .main-navigation > ol li button:hover{
@@ -288,7 +292,6 @@ main + footer {
 	outline-offset: -4px;
 }
 .dropdown-link-menu li button {
-	color: #eee;
 	background-color: transparent;
 	border: none;
 	padding: 0.625rem 0.5625rem;
@@ -362,12 +365,10 @@ main + footer {
 	outline-offset: -4px;
 }
 .dropdown-only-menu li button {
-	color: #eee;
 	background-color: transparent;
 	border: none;
 	padding: 0.625rem 0.5625rem;
 	line-height: inherit;
-	text-transform: uppercase;
 }
 .dropdown-only-menu li button svg.icon {
 	height: 0.625em;
