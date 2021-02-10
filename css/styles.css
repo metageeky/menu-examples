@@ -98,9 +98,8 @@ p + p {
 
 .skipnavlink {
 	position: absolute;
-	margin: 5px;
-	line-height: 1.75em;
-	padding: 10px;
+	margin: 0.375rem;
+	padding: 0.625rem;
 	color: #fff !important;
 	background-color: #2B72D7;
 	z-index: 2000;
