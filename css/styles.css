@@ -287,7 +287,7 @@ main + footer {
 	outline-offset: -4px;
 }
 .dropdown-link-menu li button {
-	color: #fff;
+	color: #eee;
 	background-color: transparent;
 	border: none;
 	padding: 0.625rem 0.5625rem;
@@ -340,6 +340,7 @@ main + footer {
 	padding: 0.625rem 0.3125rem;
 	white-space: nowrap;
 }
+
 .main-navigation.dropdown-only-menu > ol > li:first-of-type {
 	margin-left: calc(15px - 0.25rem);
 }
@@ -356,11 +357,12 @@ main + footer {
 	outline-offset: -4px;
 }
 .dropdown-only-menu li button {
-	color: #fff;
+	color: #eee;
 	background-color: transparent;
 	border: none;
 	padding: 0.625rem 0.5625rem;
 	line-height: inherit;
+	text-transform: uppercase;
 }
 .dropdown-only-menu li button svg.icon {
 	height: 0.625em;
