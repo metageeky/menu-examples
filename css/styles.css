@@ -270,8 +270,11 @@ main + footer {
 	font-size: 1.25rem;
 	padding: 1em 0;
 	text-align: center;
-	text-transform: lowercase;
 	margin-top: 2rem;
+}
+main + footer a,
+main + footer a:visited{
+	color: #fff;
 }
 
 nav#main-nav > ol {

@@ -80,10 +80,3 @@ details.menu-type summary {
 	border-bottom: 2px solid;
 }
 
-main + footer {
-	text-transform: none;
-}
-main + footer a,
-main + footer a:visited{
-	color: #fff;
-}
