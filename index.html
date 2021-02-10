@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/index.css">
 	<script src="js/yaml.js"></script>
 	<script src="js/pseudorandom.js"></script>
 </head>
@@ -34,6 +35,7 @@
 			<h2 id="overview">Overview</h2>
 			<p>
 				This site contains examples of accessible navigation menus. 
+			</p>
 			<h3>Caveats</h3>
 			<p> When reviewing these pages, please keep the following aspects in mind:
 			</p>
@@ -68,14 +70,201 @@
 					is recommended for accessibility purposes.
 				</li>
 			</ul>
+			
+			
 			<h2 id="menus">Menus</h2>
 			<p>
 				For each menu type, a brief description is provided including interaction 
 				features. Benefits and drawbacks are also provided.
 			<p>
+			
 			<h3>Flat Menu</h3>
 			<p>
-				The <a href="flat-menu.html
+				The <a href="flat-menu.html?&page=Home">Flat Menu</a> is the most basic 
+				navigation menu. The navigation only contains links to the top-most pages. 
+			</p>
+			<details class="menu-type">
+				<summary>Features, Benefits, and Drawbacks</summary>
+				<h4>Features</h4>
+				<p><em>None</em></p>
+
+				<h4>Benefits</h5>
+				<ul>
+					<li>
+						Simple implementation. 
+					</li>
+					<li>
+						No accessibility fixes needed beyond proper semantic HTML.
+					</li>
+					<li>
+						Does not require JavaScript and can work on older browsers.
+					</li>
+				</ul>
+
+				<h4>Drawbacks</h4>
+				<ul>
+					<li>
+						Requires every top-level page, if appropriate, to have a 
+						sub-navigation menu.
+					<li>
+						Users cannot discover site structure without clicking.
+					</li>
+					<li>
+						Users must rely on memory of site structure or site search.
+					</li>
+					<li>
+						Desire to improve discoverability of site often leads to 
+						more links in the menu, which makes it harder to support
+						in smaller screens.
+					</li>
+				</ul>
+			</details>
+			
+			<h3>Dropdown-Only Menu</h3>
+			<p>
+				The <a href="dropdown-only-menu.html?&page=Home">Dropdown-Only Menu</a> 
+				uses a dropdown/disclosure widget to show a sub-menu of pages. This
+				variant places all links (save Home) under a submenu triggered by a
+				button.
+			</p>
+			<details class="menu-type">
+				<summary>Features, Benefits, and Drawbacks</summary>
+				<h4>Features</h4>
+				<ul>
+					<li>
+						Meets expected interaction options for accessiblity:
+						<ul>
+							<li>
+								Toggle button can be triggered by touch, click, <kbd>space</kbd>
+								key, <kbd>enter</kbd> key, or <kbd>&darr;</kbd> (down arrow) key.
+							</li>
+							<li>
+								Once the menu is open, users can navigate the submenu via 
+								<kbd>tab</kbd>, <kbd>&uarr;</kbd> (up arrow) key, and 
+								<kbd>&darr;</kbd> (down arrow) key.
+							</li>
+							<li>
+								An open menu can be closed by the <kbd>Esc</kbd> (escape) key.
+								Focus is returned to the menu's toggle button.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Menu closes when the user clicks/touches anywhere outside of the menu
+						widget. This is optional and can be removed (not a requirement for
+						accessibility but common).
+					</li>
+					<li>
+						The top-level link is the first link in the submenu.
+					</li>
+				</ul>
+
+				<h4>Benefits</h5>
+				<ul>
+					<li>
+						Improved discoverability of site structure.
+					</li>
+					<li>
+						Uses basic HTML, CSS, JavaScript, and ARIA markup supported by
+						all modern browsers.
+					</li>
+					<li>
+						Target (i.e., button) sizes are large for easy accessibility.
+					</li>
+				</ul>
+
+				<h4>Drawbacks</h4>
+				<ul>
+					<li>
+						To get to a top level page, one has to toggle open the menu.
+					</li>
+					<li>
+						Users must understand that the <em>down triangle</em> icon 
+						means it is a menu toggle button and not a link.
+					</li>
+					<li>
+						Users might click on button expecting a link.
+					</li>
+					<li>
+						Requires JavaScript and may not work on older browsers although
+						the menu will default to a basic flat menu (progressive enhancement).
+					</li>
+				</ul>
+			</details>
+			
+			<h3>Dropdown-Link Menu</h3>
+			<p>
+					The <a href="dropdown-link-menu.html?&page=Home">Dropdown-Link Menu</a> 
+					uses a dropdown/disclosure widget to show a sub-menu of pages. This
+					variant keeps the top-level item as a link and then provides a toggle
+					button to display a menu of the sub-pages.
+			</p>
+			<details class="menu-type">
+				<summary>Features, Benefits, and Drawbacks</summary>
+				<h4>Features</h4>
+				<ul>
+					<li>
+						Meets expected interaction options for accessiblity:
+						<ul>
+							<li>
+								Toggle button can be triggered by touch, click, <kbd>space</kbd>
+								key, <kbd>enter</kbd> key, or <kbd>&darr;</kbd> (down arrow) key.
+							</li>
+							<li>
+								Once the menu is open, users can navigate the submenu via 
+								<kbd>tab</kbd>, <kbd>&uarr;</kbd> (up arrow) key, and 
+								<kbd>&darr;</kbd> (down arrow) key.
+							</li>
+							<li>
+								An open menu can be closed by the <kbd>Esc</kbd> (escape) key.
+								Focus is returned to the menu's toggle button.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Menu closes when the user clicks/touches anywhere outside of the menu
+						widget. This is optional and can be removed (not a requirement for
+						accessibility but common).
+					</li>
+					<li>
+						The top-level link is the first link in the submenu.
+					</li>
+				</ul>
+
+				<h4>Benefits</h5>
+				<ul>
+					<li>
+						Improved discoverability of site structure.
+					</li>
+					<li>
+						Uses basic HTML, CSS, JavaScript, and ARIA markup supported by
+						all modern browsers.
+					</li>
+					<li>
+						Users do not have to go to the top-level page.
+					</li>
+				</ul>
+
+				<h4>Drawbacks</h4>
+				<ul>
+					<li>
+						Adds an extra tab stop (the toggle button) for each top-level 
+						link. 
+					</li>
+					<li>
+						Users must understand that the <em>down triangle</em> icon 
+						means it is a menu toggle button and not a link.
+					</li>
+					<li>
+						For accessibility, the toggle button needs to be of a minimal size 
+						(ideally a little larger than it is currently).
+					</li>
+					<li>
+						Requires JavaScript and may not work on older browsers although
+						the menu will default to a basic flat menu (progressive enhancement).
+					</li>
+				</ul>
+			</details>
 			
 			
 			<h2 id="code">Code</h2>
@@ -86,8 +275,32 @@
 			<p>
 			<h3>Site Generation</h3>
 			<p>
-				Mention YAML file here.
+				Each menu variant and its pages are generated dynamically.
 			</p>
+			<ul>
+				<li>
+					The overall site structure is defined in <em>site.yaml</em>, 
+					a human-readable YAML file that defines top-level pages, 
+					subpages, and H2-level headings on each page.
+				</li>
+				<li>
+					Distinct pages are defined by the URL query parameters 
+					<em>page</em> and <em>subpage</em> as defined in the 
+					YAML file.
+				</li>
+				<li>
+					Randomized text content was gathered from 
+					<a href="https://en.wikipedia.org/">Wikipedia</a> using this 
+					<a href="https://www.boom-online.co.uk/lorem-ipsum/">placeholder 
+					text generator</a>.
+				</li>
+				<li>
+					To guarantee the same content appears on each page, a 
+					<em>seed</em> query parameter is used to prime a pseudorandom
+					number generator. The seed is a hash of the concatenation of
+					the <em>page</em> and <em>subpage</em> params.
+				</li>
+			</ul>
 			
 			
 			<h3>Resources</h3>
@@ -95,14 +308,26 @@
 				The following resources were used in designing the menus:
 			</p>
 			<ul>
-				<li>Adrian Roselli's code</li>
-				<li>WAI-ARIA authoring practices</li>
+				<li>
+					Adrian Roselli's <a href="https://adrianroselli.com/2019/06/link-disclosure-widget-navigation.html">Link
+					+ Disclosure Widget Navigation</a> pattern
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/wai-aria-practices-1.1/">
+						WAI-ARIA authoring practices</a>
+				</li>
+				<li>
+					Conversations on the <a href="https://web-a11y.slack.com/">Web A11y Slack</a>
+				</li>
 			</ul>
 		</div>
 	</main>
 	<footer>
 		<div class="page-centered-content">
-			
+			Follow this project on <a href="https://github.com/">GitHub</a>: 
+			<a href="https://github.com/metageeky/menu-examples">
+				https://github.com/metageeky/menu-examples
+			</a>
 		</div>
 	</footer>
 	

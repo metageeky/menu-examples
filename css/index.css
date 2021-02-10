@@ -1,0 +1,89 @@
+h3 {
+	margin: 0.625rem 0 0.25rem;
+}
+
+h4 {
+	margin: 0.625rem 0 0.25rem;
+}
+
+kbd {
+	border: 1px solid #888;
+	display: inline-block;
+	font-size: .9em;
+	font-weight: 900;
+	line-height: 1;
+	padding: 2px 3px;
+	white-space: nowrap;
+}
+
+p + * {
+	margin-top: 0.5rem;
+}
+
+ul {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	padding-left: 1.5rem;
+}
+
+main li + li {
+	margin-top: 0.5rem;
+}
+
+banner {
+	display: block;
+	background: #D74100;
+	color: #fff;
+}
+banner > div.page-centered-content {
+	margin-top: 0;
+	padding-top: 15px;
+}
+banner > div h1 {
+	margin: 0;
+}
+
+details.menu-type summary {
+	font-weight: bold;
+	background: #203299;
+	padding: 0.25rem 0.5rem;
+	color: #fff;
+}
+.menu-type {
+
+}
+.menu-type + h3 {
+	margin-top: 1.75rem;
+}
+
+.menu-type > h3 {
+	margin-top: 0;
+}
+.menu-type > h4 {
+	border-bottom: 2px solid;
+}
+
+.compare {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: stretch;
+}
+.compare > div {
+	flex: 1 1 auto;
+	min-width: 225px;
+	padding: 0 1rem 0.5rem 0;
+}
+.compare h4 {
+	margin: 0 0 0.25rem;
+	border-bottom: 2px solid;
+}
+
+main + footer {
+	text-transform: none;
+}
+main + footer a,
+main + footer a:visited{
+	color: #fff;
+}
