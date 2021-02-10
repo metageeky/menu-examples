@@ -25,18 +25,18 @@
 }
 
 *:focus {
-	outline: dotted #14F 3px;
+	outline: dotted #203299 3px;
 	outline-offset: 2px;
 }
 
 body {
 	font-family: ShermanSans, Verdana, Tahoma, sans-serif;
-	color: #111;
+	color: #101010;
 	line-height: 1.6;
 }
 
 a, a:visited {
-	color: #14F;
+	color: #203299;
 }
 
 banner div.page-centered-content {
@@ -63,7 +63,7 @@ banner div.page-centered-content {
 	padding: 0.75rem;
 	font-size: 1.5rem;
 	text-transform: lowercase;
-	color: #fff;
+	color: #f0f0f0;
 	background: #7815b0;
 }
 
@@ -101,8 +101,8 @@ p + p {
 	margin: 5px;
 	line-height: 1.75em;
 	padding: 10px;
-	color: #ffffff !important;
-	background-color: #14F;
+	color: #f0f0f0 !important;
+	background-color: #203299;
 	z-index: 2000;
 }
 
@@ -205,7 +205,7 @@ p + p {
 
 .main-navigation {
 	color: #eee;
-	background: #444;
+	background: #404040;
 	padding: 0;
 	font-size: 1.3125rem;
 }
@@ -229,12 +229,12 @@ p + p {
 }
 .main-navigation > ol li a:hover,
 .main-navigation > ol li button:hover{
-	color: #111;
+	color: #101010;
 	background: #ccc;
 }
 .main-navigation > ol li a:focus,
 .main-navigation > ol li button:focus {
-	outline: dotted #FFF 3px;
+	outline: dotted #f0f0f0 3px;
 	outline-offset: -3px;
 }
 .main-navigation > ol li a:focus:hover,
@@ -252,8 +252,8 @@ main {
 }
 
 main + footer {
-	background: #444;
-	color: #fff;
+	background: #404040;
+	color: #f0f0f0;
 	font-size: 1.25rem;
 	padding: 1em 0;
 	text-align: center;
@@ -293,6 +293,10 @@ main + footer {
 	padding: 0.625rem 0.5625rem;
 	line-height: inherit;
 }
+.dropdown-link-menu li button[aria-expanded="true"] {
+	
+}
+
 .dropdown-link-menu li button svg.icon {
 	height: 0.625em;
 	width: 0.625em;
@@ -312,7 +316,7 @@ main + footer {
 }
 .main-navigation.dropdown-link-menu > ol > li > ol {
 	position: absolute;
-	background: #444;
+	background: #404040;
 	list-style: none;
 	padding: 0;
 	z-index: 5;
@@ -383,7 +387,7 @@ main + footer {
 }
 .main-navigation.dropdown-only-menu > ol > li > ol {
 	position: absolute;
-	background: #444;
+	background: #404040;
 	list-style: none;
 	padding: 0;
 	z-index: 5;
