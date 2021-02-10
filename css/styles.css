@@ -290,11 +290,11 @@ nav#main-nav > ol > li::before {
 	white-space: nowrap;
 }
 .main-navigation.dropdown-link-menu > ol > li:first-of-type {
-	margin-left: calc(15px - 0.25rem);
+	margin-left: calc(15px - 0.3125rem);
 }
 @media screen and (min-width: 900px) {
 	.main-navigation.dropdown-link-menu > ol > li:first-of-type {
-		margin-left: 0;
+		margin-left: -0.3125rem;
 	}
 }
 .main-navigation.dropdown-link-menu > ol > li + li {
@@ -311,7 +311,7 @@ nav#main-nav > ol > li::before {
 	line-height: inherit;
 }
 .dropdown-link-menu li button[aria-expanded="true"] {
-	
+	background: #707780;
 }
 
 .dropdown-link-menu li button svg.icon {
@@ -368,11 +368,11 @@ nav#main-nav > ol > li::before {
 }
 
 .main-navigation.dropdown-only-menu > ol > li:first-of-type {
-	margin-left: calc(15px - 0.25rem);
+	margin-left: calc(15px - 0.3125rem);
 }
 @media screen and (min-width: 900px) {
 	.main-navigation.dropdown-only-menu > ol > li:first-of-type {
-		margin-left: 0;
+		margin-left: -0.3125rem;
 	}
 }
 .main-navigation.dropdown-only-menu > ol > li + li {
