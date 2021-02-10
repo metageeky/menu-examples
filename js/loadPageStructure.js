@@ -208,7 +208,7 @@ function addDropdownOnlyMenu(node) {
 		let a = topItem[i].querySelector('a');
 		// move link into the sub
 		let newLi = document.createElement('li');
-		newLi.appendChild('a');
+		newLi.appendChild(a);
 		sub.prepend(newLi);
 		
 		let b = document.createElement('button');
