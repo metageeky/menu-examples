@@ -45,7 +45,7 @@ banner div.page-centered-content {
 	align-items: center;
 	flex-flow: row nowrap;
 	margin: 15px auto;
-} 
+}
 
 #logo-container {
 	flex: 1 1 auto;
@@ -77,7 +77,7 @@ h2 {
 	margin: 1.125rem 0 0.5rem;
 }
 
-p { 
+p {
 	margin: 0;
 }
 
@@ -128,7 +128,7 @@ p + p {
 	display: flex;
 }
 
-#sidebar { 
+#sidebar {
 	padding-left: 1rem;
 	min-width: 175px;
 	max-width: 200px;
@@ -165,7 +165,7 @@ p + p {
 }
 /* Safari list accessibility fix for when list-style is none */
 #sub-navigation ol > li::before {
-  content: "\200B";
+	content: "\200B";
 }
 #sub-navigation ol li {
 	margin: 0.25rem 0 0;
@@ -278,7 +278,7 @@ nav#main-nav > ol {
 }
 /* Safari list accessibility fix for when list-style is none */
 nav#main-nav > ol > li::before {
-  content: "\200B";
+	content: "\200B";
 }
 
 /* dropdown-link-menu */
@@ -313,7 +313,6 @@ nav#main-nav > ol > li::before {
 .dropdown-link-menu li button[aria-expanded="true"] {
 	background: #707780;
 }
-
 .dropdown-link-menu li button svg.icon {
 	height: 0.625em;
 	width: 0.625em;
@@ -333,7 +332,7 @@ nav#main-nav > ol > li::before {
 }
 .main-navigation.dropdown-link-menu > ol > li > ol {
 	position: absolute;
-	background: #000E54;
+	background: #707780;
 	list-style: none;
 	padding: 0;
 	z-index: 5;
@@ -342,7 +341,8 @@ nav#main-nav > ol > li::before {
 }
 /* Safari list accessibility fix for when list-style is none */
 .main-navigation.dropdown-link-menu > ol > li > ol > li::before {
-  content: "\200B";
+	content: "\200B";
+	position: absolute;
 }
 
 .main-navigation.dropdown-link-menu > ol > li > ol > li > a {
@@ -418,8 +418,9 @@ nav#main-nav > ol > li::before {
 	right: 0;
 }
 /* Safari list accessibility fix for when list-style is none */
-.main-navigation.dropdown-link-menu > ol > li > ol > li::before {
-  content: "\200B";
+.main-navigation.dropdown-only-menu > ol > li > ol > li::before {
+	content: "\200B";
+	position: absolute;
 }
 .main-navigation.dropdown-only-menu > ol > li > ol > li > a {
 	display: block;
