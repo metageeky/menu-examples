@@ -164,6 +164,10 @@ p + p {
 	margin: 0;
 	padding: 0;
 }
+/* Safari list accessibility fix for when list-style is none */
+#sub-navigation ol > li::before {
+  content: "\200B";
+}
 #sub-navigation ol li {
 	margin: 0.25rem 0 0;
 }
@@ -171,12 +175,16 @@ p + p {
 #breadcrumbs ol {
 		margin: 0;
 		padding: 15px 0 0;
+		list-style: none;
 }
 
 #breadcrumbs > ol > li {
 		display: inline-block;
 		font-size: 1.1rem;
 		font-weight: 600;
+}
+#breadcrumbs > ol > li:first-of-type::before {
+	content: "\200B";
 }
 
 #breadcrumbs > ol > li + li::before {
@@ -266,7 +274,13 @@ main + footer {
 	margin-top: 2rem;
 }
 
-
+nav#main-nav > ol {
+	list-style: none;
+}
+/* Safari list accessibility fix for when list-style is none */
+nav#main-nav > ol > li::before {
+  content: "\200B";
+}
 
 /* dropdown-link-menu */
 .main-navigation.dropdown-link-menu > ol > li {
@@ -327,6 +341,11 @@ main + footer {
 	top: 100%;
 	right: 0;
 }
+/* Safari list accessibility fix for when list-style is none */
+.main-navigation.dropdown-link-menu > ol > li > ol > li::before {
+  content: "\200B";
+}
+
 .main-navigation.dropdown-link-menu > ol > li > ol > li > a {
 	display: block;
 	padding-left: 0.5rem;
@@ -395,6 +414,10 @@ main + footer {
 	z-index: 5;
 	top: 100%;
 	right: 0;
+}
+/* Safari list accessibility fix for when list-style is none */
+.main-navigation.dropdown-link-menu > ol > li > ol > li::before {
+  content: "\200B";
 }
 .main-navigation.dropdown-only-menu > ol > li > ol > li > a {
 	display: block;
