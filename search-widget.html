@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Search Widget Examples</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<header>
+		<banner>
+			<a class="skipnavlink offscreen" href="#main">
+				Skip to main content
+			</a>
+			<div class="page-centered-content">
+				<h1>Search Widget Examples</h1>
+			</div>
+			<nav id="main-nav" class="main-navigation">
+				<ol class="page-centered-content">
+				</ol>
+			</nav>
+		</banner>
+	</header>
+	<main id="main" class="page-centered-content">
+		<div id="main-content">
+		
+<script type="text/javascript" src="//syracuse.summon.serialssolutions.com/widgets/box.js"></script><script type="text/javascript">summonWidget.box({"id":"s2247f49a02a11cc91b8f9bc9ca10479","endpoint":"//syracuse.summon.serialssolutions.com","style":{"tagline":"#000","links":"#000"},"params":{"pn":1,"ho":true,"myinst":"","jt":"","l":"en"},"tagline_text":"Easily discover the world of library content","searchbutton_text":"Search","advanced_text":"More search options","placeholder_text":"","advanced":true,"suggest":false,"tagline":false,"popup":false})</script>
+
+
+			<h2>Dropdown</h2>
+			<div id="library_search">
+				<div class="lib-form" id="summon-search">
+					<form action="http://syracuse.summon.serialssolutions.com/" id="summon-search" method="GET">
+						<div>
+							<input name="s.fvf" type="hidden" value="" />
+							<label for="summon-query"><strong>FIND ARTICLES:</strong></label><br />
+							<input id="summon-query" name="s.q" title="Search terms" type="text" /> 
+							<label for="summon-lang-1" class="offscreen">Language:</label>
+							<select id="summon-lang-1" name="summon-lang-1">
+								<option selected value="">All</option>
+								<option value="English">English</option>
+								<option value="French">French</option>
+								<option value="Spanish">Spanish</option>
+							</select>
+							<input type="submit" value="Go" />
+						</div>
+					</form>
+				</div>
+			</div><!-- End of Custom Summon Search code -->
+			
+		</div>
+	</main>
+	<footer>
+		<div class="page-centered-content">
+			Follow this project on <a href="https://github.com/">GitHub</a>: 
+			<a href="https://github.com/metageeky/menu-examples">
+				https://github.com/metageeky/menu-examples
+			</a>
+		</div>
+	</footer>
+	
+	<script>
+		window.onload = function() {
+			console.log('loaded: ' + Date.now());
+			document.getElementById('summon-lang-1').addEventListener('change', (event) => {
+				console.log(event);
+				let form = event.target.parentElement.parentElement;
+				let fvf = form.querySelector('input[name="fvf"]');
+				console.log(fvf);
+			});
+		}
+	</script>
+
+</body>
+</html>
