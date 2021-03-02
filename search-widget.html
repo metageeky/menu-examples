@@ -28,17 +28,17 @@
 	<main id="main" class="page-centered-content">
 		<div id="main-content">
 		
-<script type="text/javascript" src="//syracuse.summon.serialssolutions.com/widgets/box.js"></script><script type="text/javascript">summonWidget.box({"id":"s2247f49a02a11cc91b8f9bc9ca10479","endpoint":"//syracuse.summon.serialssolutions.com","style":{"tagline":"#000","links":"#000"},"params":{"pn":1,"ho":true,"myinst":"","jt":"","l":"en"},"tagline_text":"Easily discover the world of library content","searchbutton_text":"Search","advanced_text":"More search options","placeholder_text":"","advanced":true,"suggest":false,"tagline":false,"popup":false})</script>
+<script type="text/javascript" src="//syracuse.summon.serialssolutions.com/widgets/box.js"></script><script type="text/javascript">summonWidget.box({"id":"s2247f49a02a11cc91b8f9bc9ca10479","endpoint":"//syracuse.summon.serialssolutions.com","style":{"tagline":"#000","links":"#000"},"params":{"pn":1,"ho":true,"myinst":"","jt":"","l":"en"},"tagline_text":"Easily discover the world of library content","searchbutton_text":"Search","advanced_text":"More search options","placeholder_text":"","suggest":false,"tagline":false,"popup":true})</script>
 
 
 			<h2>Dropdown</h2>
 			<div id="library_search">
 				<div class="lib-form" id="summon-search">
-					<form action="http://syracuse.summon.serialssolutions.com/" id="summon-search" method="GET">
+					<form action="https://syracuse.summon.serialssolutions.com/" id="summon-search" method="GET">
 						<div>
 							<input name="s.fvf" type="hidden" value="" />
 							<label for="summon-query"><strong>FIND ARTICLES:</strong></label><br />
-							<input id="summon-query" name="s.q" title="Search terms" type="text" /> 
+							<input id="summon-query" name="q" type="text" /> 
 							<label for="summon-lang-1" class="offscreen">Language:</label>
 							<select id="summon-lang-1" name="summon-lang-1">
 								<option selected value="">All</option>
@@ -46,7 +46,7 @@
 								<option value="French">French</option>
 								<option value="Spanish">Spanish</option>
 							</select>
-							<input type="submit" value="Go" />
+							<button type="submit" class="summon-search-submit ">Search</button>
 						</div>
 					</form>
 				</div>
