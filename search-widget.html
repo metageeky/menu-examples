@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/index.css">
+	
+	<style>
+
+	
+	</style>
 </head>
 <body>
 	<header>
@@ -28,30 +33,75 @@
 	<main id="main" class="page-centered-content">
 		<div id="main-content">
 		
-<script type="text/javascript" src="//syracuse.summon.serialssolutions.com/widgets/box.js"></script><script type="text/javascript">summonWidget.box({"id":"s2247f49a02a11cc91b8f9bc9ca10479","endpoint":"//syracuse.summon.serialssolutions.com","style":{"tagline":"#000","links":"#000"},"params":{"pn":1,"ho":true,"myinst":"","jt":"","l":"en"},"tagline_text":"Easily discover the world of library content","searchbutton_text":"Search","advanced_text":"More search options","placeholder_text":"","suggest":false,"tagline":false,"popup":true})</script>
+			<h2>Select Approach</h2>
+			<form action="https://syracuse.summon.serialssolutions.com/" id="summon-1" method="GET">
+				<span class="offscreen">SUMMON Search at SU Libraries:</span>
+				<label>
+					<span class="offscreen">Search for: </span>
+					<input name="q" type="text" placeholder="Search text" /> 
+				</label>
+				<label for="summon-lang-1" class="offscreen">Language:</label>
+				<select id="summon-lang-1" name="summon-lang-1">
+					<option selected value="">Any Language</option>
+					<option value="English">English</option>
+					<option value="French">French</option>
+					<option value="Spanish">Spanish</option>
+				</select>
+				<button type="submit" class="summon-search-submit">Search</button>
+			</form>
 
-
-			<h2>Dropdown</h2>
-			<div id="library_search">
-				<div class="lib-form" id="summon-search">
-					<form action="https://syracuse.summon.serialssolutions.com/" id="summon-search" method="GET">
-						<div>
-							<input name="s.fvf" type="hidden" value="" />
-							<label for="summon-query"><strong>FIND ARTICLES:</strong></label><br />
-							<input id="summon-query" name="q" type="text" /> 
-							<label for="summon-lang-1" class="offscreen">Language:</label>
-							<select id="summon-lang-1" name="summon-lang-1">
-								<option selected value="">All</option>
-								<option value="English">English</option>
-								<option value="French">French</option>
-								<option value="Spanish">Spanish</option>
-							</select>
-							<button type="submit" class="summon-search-submit ">Search</button>
-						</div>
-					</form>
+			<h2>Radio Button Obvious Approach</h2>
+			<form action="https://syracuse.summon.serialssolutions.com/" id="summon-2" method="GET">
+				<span class="offscreen">SUMMON Search at SU Libraries:</span>
+				<label>
+					<span class="offscreen">Search for: </span>
+					<input name="q" type="text" placeholder="Search text" /> 
+				</label>
+				<div id="summon-lang-2">
+					<label>
+						<input type="radio" id="sl-lang-2-any" name="summon-lang-2" value="" checked /> 
+						Any Language
+					</label>
+					<label>
+						<input type="radio" id="sl-lang-2-English" name="summon-lang-2" value="English" />English
+					</label>
+					<label>
+						<input type="radio" id="sl-lang-2-French" name="summon-lang-2" value="French" />French
+					</label>
+					<label>
+						<input type="radio" id="sl-lang-2-Spanish" name="summon-lang-2" value="Spanish" />
+						Spanish
+					</label>
 				</div>
-			</div><!-- End of Custom Summon Search code -->
+				<button type="submit" class="summon-search-submit">Search</button>
+			</form>
 			
+			
+			<h2>Radio Button Stylized Approach</h2>
+			<form action="https://syracuse.summon.serialssolutions.com/" id="summon-3" method="GET">
+				<span class="offscreen">SUMMON Search at SU Libraries:</span>
+				<label>
+					<span class="offscreen">Search for: </span>
+					<input name="q" type="text" placeholder="Search text" /> 
+				</label>
+				<div id="summon-lang-3">
+					<label>
+						<input type="radio" id="sl-lang-3-any" name="summon-lang-3" value="" checked /> 
+						Any Language
+					</label>
+					<label>
+						<input type="radio" id="sl-lang-3-English" name="summon-lang-3" value="English" />English
+					</label>
+					<label>
+						<input type="radio" id="sl-lang-3-French" name="summon-lang-3" value="French" />French
+					</label>
+					<label>
+						<input type="radio" id="sl-lang-3-Spanish" name="summon-lang-3" value="Spanish" />
+						Spanish
+					</label>
+				</div>
+				<button type="submit" class="summon-search-submit">Search</button>
+			</form>
 		</div>
 	</main>
 	<footer>
@@ -66,13 +116,50 @@
 	<script>
 		window.onload = function() {
 			console.log('loaded: ' + Date.now());
+			updateLanguage(document.getElementById('summon-lang-1'));
 			document.getElementById('summon-lang-1').addEventListener('change', (event) => {
-				console.log(event);
-				let form = event.target.parentElement.parentElement;
-				let fvf = form.querySelector('input[name="fvf"]');
-				console.log(fvf);
+				updateLanguage(event.target);
 			});
+			
+			updateLanguage(document.querySelector('input[name="summon-lang-2"]:checked'));
+			for(let radio of document.querySelectorAll('input[name="summon-lang-2"]')) {
+				radio.addEventListener('change', (event) => {
+					updateLanguage(event.target);
+				});
+			}
+
+			updateLanguage(document.querySelector('input[name="summon-lang-3"]:checked'));
+			for(let radio of document.querySelectorAll('input[name="summon-lang-3"]')) {
+				radio.addEventListener('change', (event) => {
+					updateLanguage(event.target);
+				});
+			}
+
 		}
+		function updateLanguage(e) {
+			// get the form
+			let f = e.parentElement;
+			while(f.tagName !== 'FORM')
+				f = f.parentElement;
+			// add/remove the hidden input magic
+			let fvf = f.querySelector('input[name="fvf"]');
+			switch(e.value) {
+				case '':
+					if(fvf !== null)
+						fvf.remove();
+					break;
+				default:
+					if(fvf === null) {
+						fvf = document.createElement('input');
+						fvf.type = 'hidden';
+						fvf.name = 'fvf';
+						f.appendChild(fvf);
+					}
+					fvf.value = 'Language,' + e.value;
+					
+			}
+		}
+		
 	</script>
 
 </body>
