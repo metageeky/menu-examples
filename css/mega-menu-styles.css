@@ -326,16 +326,37 @@ nav#main-nav > ol {
 }
 
 div.mega-sub-menu > ol {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	height: 100%;
 	padding-left: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 0px;
 }
+div.mega-sub-menu > ol.ColColCol { 
+	/* each text column is 33% */
+	grid-template-columns: repeat(3, 1fr);
+}
+div.mega-sub-menu > ol.ColColColCol { 
+	/* each text column is 25% */
+	grid-template-columns: repeat(4, 1fr);
+}
+div.mega-sub-menu > ol.ImgColCol { 
+	/* 30% for image, 35% for text columns */
+	grid-template-columns: 6fr 7fr 7fr;
+}
+div.mega-sub-menu > ol.ImgColColCol { /* 16.67% for image, 27,8% for text */
+	grid-template-columns: 3fr 5fr 5fr 5fr;
+}
+div.mega-sub-menu > ol.ImgImgColCol { /* 16.67% for image, 33% for text */
+	grid-template-columns: 1fr 1fr 2fr 2fr;
+}
+
+
 div.mega-sub-menu > ol > li {
 	list-style: none;
-	flex: 1 1 auto;
+	justify-self: center;
 }
 div.mega-sub-menu > ol > li:before {
 	content: "\200b";
@@ -343,27 +364,19 @@ div.mega-sub-menu > ol > li:before {
 }
 
 .mega-sub-menu > ol > li + li {
-	margin-left: 1rem;
+	
 }
 div.mega-sub-menu > ol > li.image-holder {
-	flex: 1 1 auto;
-	max-width: 45%;
+	align-self: center;
+	text-align: center;
+	width: 100%;
+	padding: 5px;
 }
 div.mega-sub-menu > ol > li.image-holder > a {
-
+	width: 100%;
 }
-div.mega-sub-menu > ol > li.image-holder > div {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	text-align: center;
-	height: 100%;
-}
-
 div.mega-sub-menu > ol > li.image-holder img {
+	width: 100%;
 }
 
 div.mega-sub-menu > ol > li > ol {
@@ -375,12 +388,17 @@ div.mega-sub-menu > ol > li > ol {
 	list-style-position: outside;
 	padding-left: 1rem;
 }
+.mega-sub-menu > ol > li > ol.mega-menu-bulleted li {
+	
+}
+.mega-sub-menu > ol > li > ol.mega-menu-bulleted li a {
+	
+}
+
 
 div.mega-sub-menu > ol li a {
 	color: #fff;
 	text-decoration: none;
-	display: block;
-	padding: 5px 0;
 }
 div.mega-sub-menu > ol li a:focus {
 	outline-color: #fff;
