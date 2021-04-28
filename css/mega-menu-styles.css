@@ -215,7 +215,6 @@ p + p {
 	color: #fff;
 	text-decoration: none;
 	white-space: nowrap;
-	text-transform: uppercase;
 }
 
 .main-navigation > ol > li > button:hover{
