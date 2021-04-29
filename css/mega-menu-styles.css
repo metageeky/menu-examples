@@ -327,29 +327,38 @@ nav#main-nav > ol {
 div.mega-sub-menu > ol {
 	padding-left: 0;
 	list-style: none;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 1fr;
-	grid-column-gap: 10px;
-	grid-row-gap: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-div.mega-sub-menu > ol.ColColCol { 
-	/* each text column is 33% */
-	grid-template-columns: repeat(3, 1fr);
+
+div.mega-sub-menu > ol.ColColCol li.text-column { 
+	width: 270px;
 }
-div.mega-sub-menu > ol.ColColColCol { 
-	/* each text column is 25% */
-	grid-template-columns: repeat(4, 1fr);
+
+div.mega-sub-menu > ol.ColColColCol li.text-column { 
+	width: 200px;
 }
-div.mega-sub-menu > ol.ImgColCol { 
-	/* 30% for image, 35% for text columns */
-	grid-template-columns: 6fr 7fr 7fr;
+
+div.mega-sub-menu > ol.ImgColCol li.image-column{ 
+	width: 240px;
 }
-div.mega-sub-menu > ol.ImgColColCol { /* 16.67% for image, 27,8% for text */
-	grid-template-columns: 3fr 5fr 5fr 5fr;
+div.mega-sub-menu > ol.ImgColCol li.text-column { 
+	width: 290px;
 }
-div.mega-sub-menu > ol.ImgImgColCol { /* 16.67% for image, 33% for text */
-	grid-template-columns: 1fr 1fr 2fr 2fr;
+
+div.mega-sub-menu > ol.ImgColColCol li.image-column{ 
+	width: 150px;
+}
+div.mega-sub-menu > ol.ImgColColCol li.text-column { 
+	width: 216px;
+}
+
+div.mega-sub-menu > ol.ImgImgColCol li.image-column{ 
+	width: 150px;
+}
+div.mega-sub-menu > ol.ImgImgColCol li.text-column { 
+	width: 250px;
 }
 
 
@@ -363,20 +372,25 @@ div.mega-sub-menu > ol > li:before {
 }
 
 .mega-sub-menu > ol > li + li {
-	
+	margin-left: 20px;
 }
-div.mega-sub-menu > ol > li.image-holder {
-	align-self: center;
+
+div.mega-sub-menu > ol > li.text-column {
+	align-self: flex-start;
+}
+
+div.mega-sub-menu > ol > li.image-column {
+
+}
+div.mega-sub-menu > ol > li.image-column > a {
 	text-align: center;
-	width: 100%;
-	padding: 5px;
+	display: block;
 }
-div.mega-sub-menu > ol > li.image-holder > a {
-	width: 100%;
-}
-div.mega-sub-menu > ol > li.image-holder img {
+div.mega-sub-menu > ol > li.image-column > a > img {
 	width: 100%;
 }
+
+
 
 div.mega-sub-menu > ol > li > ol {
 	padding-left: 0;
@@ -390,8 +404,12 @@ div.mega-sub-menu > ol > li > ol {
 .mega-sub-menu > ol > li > ol.mega-menu-bulleted li {
 	
 }
+.mega-sub-menu > ol > li > ol.mega-menu-bulleted li + li {
+	margin-top: 4px;
+}
 .mega-sub-menu > ol > li > ol.mega-menu-bulleted li a {
-	
+	display: block;
+	padding: 1px 0;
 }
 
 
