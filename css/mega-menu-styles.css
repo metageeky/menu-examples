@@ -249,17 +249,22 @@ main + footer a:visited{
 .main-navigation.mega-menu {
 
 }
-.main-navigation.mega-menu > ul {
+.mega-menu > ul {
 	color: #fff;
 	list-style: none;
 	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
 }
 
-.main-navigation.mega-menu > ul > li:first-of-type {
+.mega-menu > ul > li:first-of-type {
 	margin-left: calc(15px - 0.3125rem);
 }
 @media screen and (min-width: 900px) {
-	.main-navigation.mega-menu > ul > li:first-of-type {
+	.mega-menu > ul > li:first-of-type {
 		/*margin-left: -0.3125rem;*/
 		margin-left: 0;
 	}
@@ -270,7 +275,7 @@ main + footer a:visited{
 	}
 }
 
-.main-navigation.mega-menu > ul > li > button:focus:hover {
+.mega-menu > ul > li > button:focus:hover {
 	outline-offset: -4px;
 }
 .mega-menu ul > li > button.mega-menu-toggle {
@@ -278,10 +283,21 @@ main + footer a:visited{
 	border: none;
 	padding: 0.625rem 1rem;
 	line-height: inherit;
+	border-left: solid 2px transparent;
+	border-right: solid 2px transparent;
 }
 .mega-menu ul > li > button[aria-expanded="true"] {
 	background: #000e54;
+	border-left-color: #adb3b8;
+	border-right-color: #adb3b8;
 }
+.mega-menu ul > li:first-of-type > button[aria-expanded="true"] {
+	border-left-color: transparent;
+}
+.mega-menu ul > li:last-of-type > button[aria-expanded="true"] {
+	border-right-color: transparent;
+}
+
 .mega-menu li button svg.icon {
 	height: 0.625em;
 	width: 0.625em;

@@ -1,4 +1,5 @@
 window.onload = function() {
+	// REWRITE NAV TO BE CLOSEST megamenu
 	let nav = document.getElementById('main-nav');
 	
 	// events for the top-level menu buttons for dropdowns
@@ -6,7 +7,15 @@ window.onload = function() {
 	for(e of triggers) {
 		// click events for the top-level menu buttons for dropdowns
 		e.addEventListener('click', function(evt) {
-			let opened_menu = document.querySelector('nav.mega-menu button[aria-expanded="true"]');
+			let opened_menu = document.querySelector('.mega-menu button[aria-expanded="true"]');
+			// in the case of hover open, a click just switches the state to focus open
+			if(nav.getAttribute('data-hover-open') == 'true') {
+				nav.setAttribute('data-focus-open', 'true');
+				nav.setAttribute('data-hover-open', 'false');
+				evt.target.focus();
+				return;
+			}
+
 			// close any sub menus opened by button
 			if(opened_menu != null && evt.target != opened_menu) {
 				// close other opened_menu
