@@ -46,7 +46,6 @@ window.onload = function() {
 	}
 		
 	let submenus = document.querySelectorAll('button.mega-menu-toggle + div.mega-sub-menu');
-	console.log(submenus);
 	for(e of submenus) {
 		// click events for the top-level menu buttons for dropdowns
 		e.addEventListener('mouseleave', function(evt) {
@@ -71,7 +70,34 @@ window.onload = function() {
 		});
 	}
 	
-	
+	document.addEventListener('keydown', function(event){
+		if(event.key === 'Escape') {
+			let megas = document.querySelectorAll('.mega-menu');
+			for(menu of megas) {
+				// hovering open
+				if(menu.getAttribute('data-hover-open') == 'true') {
+					let b = menu.querySelector('button[aria-expanded="true"]');
+					b.setAttribute('aria-expanded','false');
+					menu.setAttribute('data-hover-open', 'false');
+				}
+				// focused open
+				else if(menu.getAttribute('data-focus-open') == 'true') {
+					let b = menu.querySelector('button[aria-expanded="true"]');
+					// move keyboard focus if it is internal to the mega menu and a link
+					if(	document.activeElement != null && 
+						document.activeElement != document.body && 
+						document.activeElement.nodeName == 'A' && 
+						menu.contains(document.activeElement)
+					) {
+						b.focus();
+					}
+					
+					b.setAttribute('aria-expanded','false');
+					menu.setAttribute('data-focus-open', 'false');
+				}
+			}
+		}
+	});
 }
 
 
