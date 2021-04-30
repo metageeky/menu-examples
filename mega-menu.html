@@ -83,7 +83,7 @@
 				</polygon>
 			</symbol>
 			<symbol id="icon-left-triangle" viewBox="0 0 50 50">
-				<polygon points="50,0 50,50 6.6,25" style="ffill:currentColor;stroke:currentColor;stroke-width:1">
+				<polygon points="50,0 50,50 6.6,25" style="fill:currentColor;stroke:currentColor;stroke-width:1">
 				</polygon>
 			</symbol>
 			<symbol id="icon-up-triangle" viewBox="0 0 50 50">
@@ -108,10 +108,10 @@
 				</div>
 				<div id="menuType">Mega Menu</div>
 			</div>
-			<nav id="main-nav" class="main-navigation mega-menu" data-menu-type="mega-menu">
+			<nav id="main-nav" class="main-navigation mega-menu" data-focus-open="false" data-hover-open="false">
 				<ol class="page-centered-content">
 					<li>
-						<button aria-expanded="false" class="mega-menu-toggle">
+						<button id="mega1" aria-expanded="false" class="mega-menu-toggle">
 							Services and Support
 							<svg class="icon down"><use xlink:href="#icon-down-triangle"></use></svg>
 							<svg class="icon up"><use xlink:href="#icon-up-triangle"></use></svg>
@@ -153,7 +153,7 @@
 						</div>
 					</li>
 					<li>
-						<button aria-expanded="false" class="mega-menu-toggle">
+						<button id="mega2" aria-expanded="false" class="mega-menu-toggle">
 							Visit and Study
 							<svg class="icon down"><use xlink:href="#icon-down-triangle"></use></svg>
 							<svg class="icon up"><use xlink:href="#icon-up-triangle"></use></svg>
@@ -199,7 +199,7 @@
 						</div>
 					</li>
 					<li>
-						<button aria-expanded="false" class="mega-menu-toggle">
+						<button id="mega3" aria-expanded="false" class="mega-menu-toggle">
 							Research
 							<svg class="icon down"><use xlink:href="#icon-down-triangle"></use></svg>
 							<svg class="icon up"><use xlink:href="#icon-up-triangle"></use></svg>
@@ -246,7 +246,7 @@
 						</div>
 					</li>
 					<li>
-						<button aria-expanded="false" class="mega-menu-toggle">
+						<button id="mega4" aria-expanded="false" class="mega-menu-toggle">
 							Collections
 							<svg class="icon down"><use xlink:href="#icon-down-triangle"></use></svg>
 							<svg class="icon up"><use xlink:href="#icon-up-triangle"></use></svg>
@@ -288,7 +288,7 @@
 						</div>						
 					</li>
 					<li>
-						<button aria-expanded="false" class="mega-menu-toggle">
+						<button id="mega5" aria-expanded="false" class="mega-menu-toggle">
 							About Us
 							<svg class="icon down"><use xlink:href="#icon-down-triangle"></use></svg>
 							<svg class="icon up"><use xlink:href="#icon-up-triangle"></use></svg>
@@ -362,6 +362,13 @@
 			</nav>
 		</div>
 		-->
+		<ul>
+			<li> Closes on ESC. If focus is in submenu, move to parent trigger.
+			<li> No auto-open on focus. Open must be triggered by 
+			<li> If focus is IN a submenu, no hover opening unless there is a click
+			<li> if focus is ON submenu trigger and submenu opened, hover does not open. Click outside will close. 
+			<li>	If focusable, go there but if hover is open but focus moves, close the hover
+		</ul>
 	</main>
 	<footer>
 		<div class="page-centered-content">

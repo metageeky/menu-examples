@@ -149,6 +149,7 @@ p + p {
 
 #main {
 	display: flex;
+	min-height: 400px;
 }
 
 #sidebar {
@@ -217,18 +218,7 @@ p + p {
 	white-space: nowrap;
 }
 
-.main-navigation > ol > li > button:hover{
-	color: #fff;
-	background: #D74100;
-}
-.main-navigation > ol > li > button:focus {
-	outline: dotted #fff 3px;
-	outline-offset: -3px;
-}
-.main-navigation > ol > li > button:focus:hover {
-	outline: dotted #fff 3px;
-	outline-offset: -3px;
-}
+
 
 .main-navigation > ol > li > ol {
 	display: none;
@@ -251,14 +241,18 @@ main + footer a:visited{
 	color: #fff;
 }
 
-nav#main-nav > ol {
-	list-style: none;
-}
+
+
 
 /* mega-menu top-level */
+
+.main-navigation.mega-menu {
+
+}
 .main-navigation.mega-menu > ol {
-	position: relative;
 	color: #fff;
+	list-style: none;
+	position: relative;
 }
 
 .main-navigation.mega-menu > ol > li:first-of-type {
@@ -276,16 +270,13 @@ nav#main-nav > ol {
 	}
 }
 
-.main-navigation.mega-menu > ol > li + li {
-	margin-left: 0.5rem;
-}
 .main-navigation.mega-menu > ol > li > button:focus:hover {
 	outline-offset: -4px;
 }
-.mega-menu ol > li > button {
+.mega-menu ol > li > button.mega-menu-toggle {
 	background-color: transparent;
 	border: none;
-	padding: 0.625rem 0.625rem;
+	padding: 0.625rem 1rem;
 	line-height: inherit;
 }
 .mega-menu ol > li > button[aria-expanded="true"] {
@@ -310,19 +301,64 @@ nav#main-nav > ol {
 	display: none;
 }
 
+.main-navigation > ol > li > button:hover {
+	color: #fff;
+	background: #D74100;
+}
+.main-navigation > ol > li > button:focus {
+	outline: dotted #fff 3px;
+	outline-offset: -3px;
+}
+.main-navigation > ol > li > button:focus:hover {
+	outline: dotted #fff 3px;
+	outline-offset: -3px;
+}
 
-.main-navigation.mega-menu > ol > li > div.mega-sub-menu {
+
+ div.mega-sub-menu {
+	display: none;
 	position: absolute;
 	background: #000e54;
 	color: #fff;
 	list-style: none;
-	padding: 10px 20px;
-	z-index: 5;
-	top: 100%;
+	padding: 15px 20px;
+	z-index: 10;
 	right: 0;
-	width: 100%;
-	min-height: 4rem;
+	min-width: 900px;
+	transition: opacity .4s 1s;
+ }
+/* add a 10px "border" around the submenus to make it not close as easily */
+ div.mega-sub-menu:before {
+	content: "";
+	background: transparent;
+	display: block;
+	z-index: -1;
+	position: absolute;
+	width: calc(100% + 20px); 
+	height: calc(100% + 10px);
+	top: 0;
+	left: -10px;
 }
+
+
+/*
+nav[data-focus-open="false"] button.mega-menu-toggle:hover + div.mega-sub-menu {
+	display: block;
+}
+*/
+
+
+nav[data-focus-open="true"] button[aria-expanded="true"] + div.mega-sub-menu {
+	display: block;
+}
+
+nav[data-hover-open="true"] button[aria-expanded="true"] + div.mega-sub-menu {
+	display: block;
+}
+
+
+
+
 
 div.mega-sub-menu > ol {
 	padding-left: 0;
@@ -431,11 +467,6 @@ div.mega-sub-menu > ol li a:hover {
 }
 
 
-.main-navigation.mega-menu > ol > li > button[aria-expanded="false"] + div.mega-sub-menu {
-	display: none;
-}
-.main-navigation.mega-menu > ol > li > button[aria-expanded="true"] + div.mega-sub-menu {
-	display: block;
-}
+
 
 
